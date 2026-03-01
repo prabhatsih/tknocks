@@ -6,8 +6,12 @@
     --light-text: #f8f9fa;
     --border-color: #dee2e6;
     --sidebar-width: 320px;
-    --header-height: 60px; /* Assuming a fixed header height */
+    --header-height: 70px; /* Assuming a fixed header height */
 }
+.ls-1 { letter-spacing: 1px; }
+.ls-2 { letter-spacing: 2px; }
+.ls-3 { letter-spacing: 3px; }
+.ls-05 { letter-spacing: 0.5px; }
 
 *{
     margin: 0;
@@ -18,21 +22,15 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--light-bg);
-    padding-top: var(--header-height); /* Ensure content starts below the fixed header */
 }
 
 .header {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
+    z-index: 9;
     height: var(--header-height);
 }
 
 .navbar-brand img {
-    max-height: 40px;
+    max-height: 42px;
 }
 
 /* Make space for the left icon bar */
