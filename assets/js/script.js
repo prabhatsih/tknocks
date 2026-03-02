@@ -1,6 +1,13 @@
-// Initialize Bootstrap Tooltips
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+﻿document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
 
+  function handleNavbarScroll() {
+    const scrolled = window.scrollY > 50;
+
+    navbar.classList.toggle("navbar-scrolled", scrolled);
+    navbar.classList.toggle("shadow-md", scrolled);
+  }
+
+  window.addEventListener("scroll", handleNavbarScroll, { passive: true });
+});
