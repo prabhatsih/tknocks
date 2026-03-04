@@ -24,7 +24,9 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Letter Spacing Utilities */
+.fs-15 {
+    font-size: 15px;
+}
 
 .ls-sm {
     letter-spacing: 0.02em;
@@ -48,11 +50,59 @@
 }
 
 .navbar {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.5);
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); */
+}
+
+.text-slider {
+    overflow: hidden;
+}
+
+.text-track {
+    display: flex;
+    gap: 12px;
+    transition: transform .5s ease;
+}
+
+.text-slide {
+    flex: 0 0 100%;
+}
+
+/* tablet */
+@media (min-width:768px) {
+    .text-slide {
+        flex: 0 0 calc((100% - 12px)/2);
+    }
+}
+
+/* desktop */
+@media (min-width:992px) {
+    .text-slide {
+        flex: 0 0 calc((100% - 24px)/3);
+    }
+}
+
+.waving-girl img {
+    animation: girlWave 2s ease-in-out infinite;
+}
+
+@keyframes girlWave {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(70px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
 }
