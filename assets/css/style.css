@@ -92,7 +92,6 @@
 }
 
 @keyframes girlWave {
-
     0% {
         transform: translateX(0);
     }
@@ -104,5 +103,55 @@
     100% {
         transform: translateX(0);
     }
-
 }
+
+/* Left Side Navbar Start */
+.left-sidebar {
+    width: 5.2%;
+    transition: all .3s ease;
+}
+
+.left-sidebar:hover {
+    background-color: #000000aa !important;
+}
+
+.left-sidebar:hover .left-sidebar-menu {
+    background-color: #353535cc !important;
+}
+
+.left-sidebar:has(.left-sidebar-menu:hover) {
+    width: 22.79%;
+}
+
+.left-sidebar-menu:hover {
+    width: 93.5%;
+    transition: all .5s ease-in;
+}
+
+/* Left Side Navbar End */
+
+/* Partner Slider Section Start */
+.partner-logo {
+    width: 160px;
+    height: 80px;
+}
+
+.partner-slider {
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+
+    0% {
+        transform: translateX(0);
+    }
+}
+
+/* Partner Slider Section End */
