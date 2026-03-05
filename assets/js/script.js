@@ -128,3 +128,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.closest('.custom-input-group, .phone-group, .message-group')?.style.setProperty('box-shadow', 'none');
             });
         });
+
+        // 
+
+       
+$(document).ready(function(){
+    // Force activate the default tab
+    $('#orworktb1-tab').tab('show');
+
+    // Make sure clicking works even if something overrides
+    $('.nav-link[data-toggle="pill"]').on('click', function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+});
