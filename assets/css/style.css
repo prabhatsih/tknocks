@@ -1,0 +1,58 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --tk-bg: #f3f8fc;
+    --tk-text: #11263b;
+    --tk-muted: #5d7388;
+    --tk-border: #d6e4ef;
+    --tk-primary: #2878b8;
+    --tk-surface: #ffffffff;
+    --tk-primary-rgb: 40, 120, 184;
+
+    /* Bootstrap mapping */
+    --bs-body-bg: var(--tk-bg);
+    --bs-body-color: var(--tk-text);
+    --bs-primary: var(--tk-primary);
+    --bs-border-color: var(--tk-border);
+    --bs-primary-rgb: var(--tk-primary-rgb);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Letter Spacing Utilities */
+
+.ls-sm {
+    letter-spacing: 0.02em;
+}
+
+.ls-md {
+    letter-spacing: 0.05em;
+}
+
+.ls-lg {
+    letter-spacing: 0.1em;
+}
+
+.ls-xl {
+    letter-spacing: 0.2em;
+}
+
+.brand-logo {
+    height: 37px;
+    object-fit: contain;
+}
+
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); */
+}
