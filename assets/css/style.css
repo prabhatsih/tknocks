@@ -24,8 +24,20 @@
     font-family: "Poppins", sans-serif;
 }
 
+.fs-14 {
+    font-size: 14px;
+}
+
 .fs-15 {
     font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
 }
 
 .ls-sm {
@@ -155,3 +167,236 @@
 }
 
 /* Partner Logo Section End */
+
+/* Our Sevice Section Start */
+.flip-main {
+    perspective: 1000px;
+}
+
+.flip-card {
+    position: relative;
+    height: 380px;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+
+.flip-main:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+.flip-back ul li span {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.flip-back ul li span::after {
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    position: absolute;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+}
+
+.flip-back ul li:hover span::after {
+    cursor: pointer;
+    transform: scaleX(1);
+}
+
+/* Our Sevice Section End */
+
+/* About us section Start */
+.tknockss-bg::before {
+    content: "";
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: -30px;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bgRotate 20s linear infinite;
+    background-image: url(../images/bg-field-tknocks.png);
+}
+
+.orbit-img {
+    width: 13%;
+    opacity: 0;
+    padding: 6px 12px;
+    position: absolute;
+    background: white;
+    border-radius: 25px;
+    transform: scale(0.08);
+    transform-origin: center center;
+    animation: appearFromBehind 3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.orbit-img {
+    transition: transform 0.3s ease;
+}
+
+.img1 {
+    top: 8%;
+    left: 36%;
+}
+
+.img2 {
+    top: 25%;
+    left: 75%;
+}
+
+.img3 {
+    top: 29%;
+    left: 39%;
+}
+
+.img4 {
+    top: 45%;
+    left: 74%;
+}
+
+.img5 {
+    top: 65%;
+    left: 38%;
+}
+
+.img6 {
+    top: 61%;
+    left: 70%;
+}
+
+.img7 {
+    top: 80%;
+    left: 50%;
+}
+
+.img8 {
+    top: 62%;
+    left: 10%;
+}
+
+.img9 {
+    top: 44%;
+    left: 1%;
+}
+
+.img10 {
+    top: 23%;
+    left: 6%;
+}
+
+.center-logo {
+    top: 51%;
+    left: 51%;
+    z-index: 3;
+    width: 120px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.tknockss-bg .waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+}
+
+.wave-inner {
+    width: 110px;
+    height: 110px;
+    box-shadow: 0 0 20px rgba(218, 234, 249, 0.8), 0 0 40px rgba(216, 230, 255, 0.6), inset 0 0 25px rgb(255 255 255 / 1);
+    animation: wavePulse 3.6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+.wave-middle {
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 0 30px rgba(201, 220, 247, 0.65), 0 0 60px rgb(255 255 255 / 1);
+    animation: wavePulse 3.6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    animation-delay: 1.2s;
+}
+
+.wave-outer {
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 0 40px rgba(192, 209, 243, 0.55), 0 0 80px rgb(255 255 255 / 1);
+    animation: wavePulse 3.6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    animation-delay: 2.4s;
+}
+
+@keyframes bgRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appearFromBehind {
+    0% {
+        transform: scale(0.08);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes wavePulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.95;
+    }
+
+    45% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.9);
+    }
+
+    75% {
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(3.4);
+        opacity: 0;
+    }
+}
+
+/* About us section End */
