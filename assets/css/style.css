@@ -56,6 +56,11 @@
     letter-spacing: 0.2em;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
+/* Navbar Section Start */
 .brand-logo {
     height: 37px;
     object-fit: contain;
@@ -70,6 +75,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); */
 }
+
+/* Navbar Section End */
 
 .text-slider {
     overflow: hidden;
@@ -229,7 +236,6 @@
     z-index: 1;
     width: 100%;
     height: 100%;
-    left: -30px;
     position: absolute;
     background-size: contain;
     background-position: center;
