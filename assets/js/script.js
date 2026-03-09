@@ -67,23 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
        
     });
 // 
-   tabBtns.forEach((btn, index) => {
-            btn.addEventListener('keydown', function(e) {
-                let targetIndex;
-                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    targetIndex = (index + 1) % tabBtns.length;
-                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    targetIndex = (index - 1 + tabBtns.length) % tabBtns.length;
-                }
-                if (targetIndex !== undefined) {
-                    tabBtns[targetIndex].focus();
-                    tabBtns[targetIndex].click();
-                }
-            });
-        });
-    // 
+
     // Service selection
         function selectService(element) {
             // Remove active from all
@@ -129,16 +113,32 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // 
+// our work js tabs button
 
        
-$(document).ready(function(){
-    // Force activate the default tab
-    $('#orworktb1-tab').tab('show');
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Make sure clicking works even if something overrides
-    $('.nav-link[data-toggle="pill"]').on('click', function(e) {
-        e.preventDefault();
-        $(this).tab('show');
+    var tabLinks = document.querySelectorAll('#myTab a');
+
+    tabLinks.forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var target = this.getAttribute("href");
+
+            document.querySelectorAll('.tab-pane').forEach(function (pane) {
+                pane.classList.remove('show','active');
+            });
+
+            document.querySelector(target).classList.add('show','active');
+
+            document.querySelectorAll('#myTab .nav-link').forEach(function (link) {
+                link.classList.remove('active');
+            });
+
+            this.classList.add('active');
+        });
     });
+
 });
+
