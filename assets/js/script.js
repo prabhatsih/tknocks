@@ -1,14 +1,13 @@
-// Initialize Bootstrap Tooltips
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-// switiching flip tab
+﻿document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
 
-document.addEventListener("DOMContentLoaded", function () {
+  function handleNavbarScroll() {
+    const scrolled = window.scrollY > 50;
 
-    const tabs = document.querySelectorAll(".tab");
-    const contents = document.querySelectorAll(".tab-service-content");
+    navbar.classList.toggle("navbar-scrolled", scrolled);
+    navbar.classList.toggle("shadow-md", scrolled);
+  }
 
     tabs.forEach(tab => {
         tab.addEventListener("click", function () {

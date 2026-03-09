@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Tknocks</title>
     <link rel="shortcut icon" href="./assets/images/tknocks.jpeg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- Main Header -->
@@ -127,1026 +129,101 @@
                         <p><i class="fas fa-envelope"></i> info@tknocks.com</p>
                     </div>
                 </div>
+    <!-- Navbar Section Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container align-items-center">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/name-logo.png" alt="Tknocks" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="#">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="#">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="#">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 pb-lg-2 fw-semibold  active" aria-current="page" href="#">
+                            <i class="fa fa-home text-warning"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+    <!-- Navbar Section End -->
 
-    <!-- Right Contact/Social Bar -->
-    <div class="right-contact-bar d-flex flex-column">
-        <a href="tel:9568115511" class="contact-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="+91-9568115511">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="skype:live:.cid.a5bdbf0f1812398a?userinfo" target="_blank" class="contact-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="Skype">
-            <i class="fab fa-skype"></i>
-        </a>
-        <a href="mailto:info@tknocks.in" class="contact-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="info@tknocks.in">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=+919568115511" target="_blank" class="contact-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <main class="main-content">
-        <div class="banner-container">
-            <!-- Main Banner Carousel -->
-            <div id="mainBanner" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="banner-slide slide-1">
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <div class="banner-content">
-                                            <h1>Best <strong>IT Solutions <br> Provider Agency</strong></h1>
-                                            <p>A team of Information Technology experts is ready to provide solutions for every Business & Home user in the simplest way at the best budget.</p>
-                                            <a href="about-us.php" class="btn btn-primary">About Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Hero Section Start -->
+    <section class="hero-section postion-relative top-0">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner vh-100">
+                <div class="carousel-item active h-100" data-bs-interval="7000">
+                    <div class="d-flex flex-column flex-md-row w-100 h-100 position-relative">
+                        <div class="d-none d-lg-block w-25 h-100 border-end border-3 border-white">
+                            <img src="./assets/images/banner-bgA.png" class="w-100 h-100 object-fit-cover"
+                                alt="Left Image">
                         </div>
+                        <div class="flex-fill h-100">
+                            <img src="./assets/images/banner-bg.png" class="w-100 h-100 object-fit-cover"
+                                alt="Right Image">
+                        </div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="banner-slide slide-2">
-                             <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <div class="banner-content">
-                                            <h1><strong>Best <span style="color:#3198f3;">IT Solutions</span> <br> Provider Agency</strong></h1>
-                                            <p>A team of Information Technology experts is ready to provide solutions for every Business & Home user in the simplest way at the best budget.</p>
-                                            <a href="about-us.php" class="btn btn-primary">About Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="carousel-item">
-                        <div class="banner-slide slide-3">
-                             <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <div class="banner-content">
-                                            <h1>Best <strong>IT Solutions <br> Provider Agency</strong></h1>
-                                            <p>A team of Information Technology experts is ready to provide solutions for every Business & Home user in the simplest way at the best budget.</p>
-                                            <a href="about-us.php" class="btn btn-primary">About Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="carousel-caption d-none d-md-block text-dark">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#mainBanner" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#mainBanner" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <!-- Services Carousel -->
-            <div class="services-carousel-container">
-                <div class="container">
-                    <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="service-card">
-                                             <a href="digital-marketing.php">
-                                                <div class="service-icon">
-                                                    <img src="assets/images/digital-marketinglogo.png" alt="Digital Marketing">
-                                                </div>
-                                                <h3>Digital Marketing</h3>
-                                                <p>SEO Services are counted under it! Well, it’s no secret that</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="service-card">
-                                            <a href="design-dev.php">
-                                                <div class="service-icon">
-                                                     <img src="assets/images/website-design-services.png" alt="Design & Development">
-                                                </div>
-                                                <h3>Design & Development</h3>
-                                                <p>SEO Services are counted under it! Well, it’s no secret that</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="service-card">
-                                            <a href="it-constult.php">
-                                                <div class="service-icon">
-                                                    <img src="assets/images/it-consulting.png" alt="IT Consulting">
-                                                </div>
-                                                <h3>IT Consulting</h3>
-                                                <p>SEO Services are counted under it! Well, it’s no secret that</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="service-card">
-                                            <a href="virtualstaffing.php">
-                                                <div class="service-icon">
-                                                    <img src="assets/images/support.png" alt="Virtual Staffing">
-                                                </div>
-                                                <h3>Virtual Staffing</h3>
-                                                 <p>SEO Services are counted under it! Well, it’s no secret that</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Add another carousel-item for more services -->
-                             <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="service-card">
-                                             <a href="digital-marketing.php">
-                                                <div class="service-icon">
-                                                    <img src="assets/images/app-mobile.png" alt="Mobile App">
-                                                </div>
-                                                <h3>Mobile App Dev</h3>
-                                                <p>SEO Services are counted under it! Well, it’s no secret that</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- Add other cards -->
-                                </div>
-                            </div>
+                <div class="carousel-item h-100" data-bs-interval="7000">
+                    <div class="d-flex flex-column flex-md-row w-100 h-100">
+                        <div class="d-none d-lg-block w-25 h-100 border-end border-3 border-white">
+                            <img src="./assets/images/banner-bgA.png" class="w-100 h-100 object-fit-cover"
+                                alt="Left Image">
+                        </div>
+                        <div class="flex-fill h-100">
+                            <img src="./assets/images/banner-bg.png" class="w-100 h-100 object-fit-cover"
+                                alt="Right Image">
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Client Logo Slider -->
-        <div class="logo-slider-section py-5">
-            <div class="logo-scroller">
-                <div class="logo-scroller-inner">
-                    <img src="./assets/images/a9.png" alt="Client 9">
-                    <img src="./assets/images/a10.png" alt="Client 10">
-                    <img src="./assets/images/a11.png" alt="Client 11">
-                    <img src="./assets/images/a13.png" alt="Client 13">
-                    <img src="./assets/images/a14.png" alt="Client 14">
-                    <img src="./assets/images/a15.png" alt="Client 15">
-                    <img src="./assets/images/a16.png" alt="Client 16">
-                    <img src="./assets/images/digital-marketinglogo.png" alt="Digital Marketing Logo">
-                    <img src="./assets/images/it-consulting.png" alt="IT Consulting Logo">
-                    <img src="./assets/images/support.png" alt="Support Logo">
-                    
-                    <!-- Duplicate for infinite scroll effect -->
-                    <img src="./assets/images/a9.png" alt="Client 9">
-                    <img src="./assets/images/a10.png" alt="Client 10">
-                    <img src="./assets/images/a11.png" alt="Client 11">
-                    <img src="./assets/images/a13.png" alt="Client 13">
-                    <img src="./assets/images/a14.png" alt="Client 14">
-                    <img src="./assets/images/a15.png" alt="Client 15">
-                    <img src="./assets/images/a16.png" alt="Client 16">
-                    <img src="./assets/images/digital-marketinglogo.png" alt="Digital Marketing Logo">
-                    <img src="./assets/images/it-consulting.png" alt="IT Consulting Logo">
-                    <img src="./assets/images/support.png" alt="Support Logo">
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- our services -->
-     <section class="service-tab-content">
-        <div class="container-fluid">
-            <div class="text-center">
-                <h1 class="fw-bolder text-primary fs-1">Our Services</h1>
-             <p>We develop business concepts digitally that can meet market needs, empower businesses’ brand identity,<br> 
-                and encourage business growth and expansion.
-            </p>
-            </div>
-            <div class="tabs">
-                <div class="tab active" data-tab="web">Web Development</div>
-                <div class="tab" data-tab="digital"> Digital Marketing</div>
-            </div>
-            <!-- web developement tab -->
-             <div id="web" class="tab-service-content active pb-4">
-                <h2 class="main-service-heading">WEB DEVELOPMENT</h2>
-                <div class="tree-container">
-                    <div class="branch-main"></div>
-                    <div class="branch-main2"></div>
-                    <!-- First Row: 4 Cards -->
-                    <div class="cards-wrapper web-row web-row-first">
-                        <!-- 1. Web Design -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-image">
-                                        <img src="./assets/images/web-design.webp" alt="Web Design">
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Web Design</h3>
-                                        <p>CRM is a must for every business to manage clients /
-                                            customers, leads, dashboards, performance, sales, services and business data
-                                            analytics.</p>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardA.png" alt="">
-                                    <h3>Web Design</h3>
-                                    <ul>
-                                        <li>Responsive & Modern</li>
-                                        <li>Award-Winning UI/UX</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Mobile-First Approach</li>
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 2. Frontend Development -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <!-- Top Image -->
-                                    <div class="card-image">
-                                        <img src="https://thumbs.dreamstime.com/b/javascript-front-end-code-computer-programming-source-code-abstract-screen-web-developer-javascript-front-end-code-computer-104079249.jpg"
-                                            alt="Frontend Development">
-                                    </div>
-
-                                    <!-- Content -->
-                                    <div class="card-content">
-                                        <h3>Frontend Development</h3>
-                                        <p>Complete Information
-                                            Technology Services including
-                                            Datacenters Establishment,
-                                            Migration, Active & passive
-                                            Computer network.</p>
-
-                                        <!-- Arrow Icon (flip hint) -->
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Back side remains the same -->
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardB.png" alt="">
-                                    <h3>Frontend Development</h3>
-                                    <ul>
-                                        <li>React, Vue, Angular</li>
-                                        <li>HTML5, JavaScript/ES6+</li>
-                                        <li>Responsive</li>
-                                        <li>Performance Optimization</li>
-                                        <li>Cross Compatibility</li>
-                                        <li>Cross Compatibility</li>
-                                        <li>Cross Compatibility</li>
-
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 3. Backend Development -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <!-- Top Image -->
-                                    <div class="card-image">
-                                        <img src="https://thumbs.dreamstime.com/b/www-software-development-python-programming-developer-code-source-close-up-abstract-computer-script-127601322.jpg"
-                                            alt="Backend Development">
-                                    </div>
-
-                                    <!-- Content -->
-                                    <div class="card-content">
-                                        <h3>Backend Development</h3>
-                                        <p>Web designers at TKNOCKS are proficient at creating a website
-                                            which is responsive irrespective web design of the platform diversity .</p>
-
-                                        <!-- Arrow Icon (flip hint) -->
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Back side remains unchanged -->
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardC.png" alt="">
-                                    <h3>Backend Development</h3>
-                                    <ul>
-                                        <li>Node.js, Python, PHP, Laravel</li>
-                                        <li>Database Design & Management</li>
-                                        <li>RESTful & GraphQL APIs</li>
-                                        <li>Authentication & Security</li>
-                                        <li>Server Deployment</li>
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. E-commerce Solutions -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <!-- Top Image -->
-                                    <div class="card-image">
-                                        <img src="https://static.vecteezy.com/system/resources/previews/045/740/390/non_2x/online-shopping-and-e-commerce-concept-young-woman-using-laptop-computer-with-shopping-cart-icon-order-in-online-store-shopping-on-internet-concept-on-virtual-screen-with-hands-typing-on-keyboard-photo.jpg"
-                                            alt="E-commerce Solutions">
-                                    </div>
-
-                                    <!-- Content -->
-                                    <div class="card-content">
-                                        <h3>E-commerce Solutions</h3>
-                                        <p>Complete Information
-                                            Technology Services including
-                                            Datacenters Establishment,
-                                            Migration, Active & passive
-                                            Computer network</p>
-
-                                        <!-- Arrow Icon (flip hint) -->
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Back side remains unchanged -->
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardD.png" alt="">
-                                    <h3>E-commerce Solutions</h3>
-                                    <ul>
-                                        <li>Shopify, WooCommerce, Custom</li>
-                                        <li>Payment Gateway Integration</li>
-                                        <li>Inventory & Order Management</li>
-                                        <li>Secure Checkout</li>
-                                        <li>Conversion Optimization</li>
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Row: 2 Larger Cards -->
-                    <div class="cards-wrapper web-row web-row-second">
-                        <!-- 5. CMS Development -->
-                        <div class="flip-card large-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-split-layout">
-                                        <!-- Left: Content -->
-                                        <div class="card-text-side">
-                                            <h3>CMS Development</h3>
-                                            <p>Easy-to-manage content systems tailored to your needs Complete
-                                                Information
-                                                Technology Services including
-                                                Datacenters Establishment.</p>
-                                        </div>
-
-                                        <!-- Right: Image -->
-                                        <div class="card-image-side">
-                                            <img src="https://cdn.dribbble.com/userupload/44744714/file/8185e77b09ad6547e899f7e1aad02d94.png?format=webp&resize=800x600&vertical=center"
-                                                alt="CMS Development Dashboard">
-                                        </div>
-
-                                        <!-- Arrow Icon (bottom-right) -->
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Back side unchanged -->
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardA.png" alt="">
-                                    <h3>CMS Development</h3>
-                                    <ul>
-                                        <li>WordPress, Strapi, Sanity CRM is a must for every businesss</li>
-                                        <li>Custom Admin Panels to manage clients /
-                                            customers, leads.</li>
-                                        <li>Headless CMS Integration dashboards, performance, sales.</li>
-                                        <li>Sanity CRM is a must for every businesss Custom.</li>
-                                    </ul>
-                                    <button class="large-flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. Maintenance & Support -->
-                        <div class="flip-card large-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-split-layout">
-                                        <!-- Left: Content -->
-                                        <div class="card-text-side">
-                                            <h3>Maintenance & Support</h3>
-                                            <p>Ongoing care to keep your website secure and up-to-date Complete
-                                                Information
-                                                Technology Services including
-                                                Datacenters
-                                                Migration, Active.</p>
-                                        </div>
-
-                                        <!-- Right: Image -->
-                                        <div class="card-image-side">
-                                            <img src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/website-maintenance-8-20240909-7667687.webp"
-                                                alt="Website Maintenance Dashboard">
-                                        </div>
-
-                                        <!-- Arrow Icon (bottom-right) -->
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Back side unchanged -->
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardA.png" alt="">
-                                    <h3>Maintenance & Support</h3>
-                                    <ul>
-                                        <li>WordPress, Strapi, Sanity CRM is a must for every businesss</li>
-                                        <li>Custom Admin Panels to manage clients /
-                                            customers, leads.</li>
-                                        <li>Headless CMS Integration dashboards, performance, sales.</li>
-                                        <li>Sanity CRM is a must for every businesss Custom.</li>
-                                    </ul>
-                                    <button class="large-flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="carousel-caption d-none d-md-block text-dark">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
-            </div>
-            <!-- digital marketing -->
-             <div id="digital" class="tab-service-content">
-                <h2 class="main-service-heading">DIGITAL MARKETING</h2>
-                <div class="tree-container">
-                    <div class="branch-main"></div>
-                    <div class="branch-main2"></div>
-                    <!-- First Row: 4 Small Cards -->
-                    <div class="cards-wrapper digital-row digital-row-first">
-                        <!-- 1. SEO Services -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-image">
-                                        <img src="https://agencyanalytics.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fdfcvkz6j859j%2F1MEC1Kc2RFOGvh79IM5WIc%2F21cb143513d1cc92a717df20120bd79b%2FSEO-Dashboard-Template-Example.png&w=3840&q=75"
-                                            alt="SEO Services Dashboard">
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>SEO Services</h3>
-                                        <p>Boost your visibility on search engines and drive sustainable organic
-                                            traffic...</p>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardA.png" alt="">
-                                    <h3>SEO Services</h3>
-                                    <ul>
-                                        <li>Comprehensive Keyword</li>
-                                        <li>On-Page & Optimization</li>
-                                        <li>Technical Audits</li>
-                                        <li>High-Quality Building</li>
-                                        <li>Tracking & Reporting</li>
-                                        <li>Tracking & Reporting</li>
-                                        <li>Tracking & Reporting</li>
-
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
+                <div class="carousel-item h-100" data-bs-interval="7000">
+                    <div class="d-flex flex-column flex-md-row w-100 h-100">
+                        <div class="d-none d-lg-block w-25 h-100 border-end border-3 border-white">
+                            <img src="./assets/images/banner-bgA.png" class="w-100 h-100 object-fit-cover"
+                                alt="Left Image">
                         </div>
-
-                        <!-- 2. PPC Advertising -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-image">
-                                        <img src="./assets/images/web-design.webp" alt="PPC Advertising Dashboard">
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>PPC Advertising</h3>
-                                        <p>Instant traffic and leads through targeted paid campaigns on Google, Meta &
-                                            more...</p>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardB.png" alt="">
-                                    <h3>PPC Advertising</h3>
-                                    <ul>
-                                        <li>Google Ads </li>
-                                        <li>Meta Ads</li>
-                                        <li>Campaign Setup</li>
-                                        <li>Ad Copywriting & A/B Testing</li>
-                                        <li>ROI-Focused Optimization</li>
-                                        <li>ROI-Focused Optimization</li>
-
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 3. Social Media Marketing -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-image">
-                                        <img src="https://images.klipfolio.com/website/public/ec8a48b1-aac0-4d65-af27-a0c51452b333/social-media-performance-dashboard_1.png"
-                                            alt="Social Media Marketing Dashboard">
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Social Media Marketing</h3>
-                                        <p>Engage your audience and build brand loyalty across major platforms...</p>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardC.png" alt="">
-                                    <h3>Social Media Marketing</h3>
-                                    <ul>
-                                        <li>Platform-Specific Strategy</li>
-                                        <li>Content Calendar </li>
-                                        <li>Organic Growth</li>
-                                        <li>Paid Social Campaigns</li>
-                                        <li>Analytics & Performance</li>
-                                        <li>Analytics & Performance</li>
-                                        <li>Analytics & Performance</li>
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. Content Marketing -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-image">
-                                        <img src="https://www.smartinsights.com/wp-content/uploads/2024/03/Content-Marketing.png"
-                                            alt="Content Marketing Strategy">
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Content Marketing</h3>
-                                        <p>Attract and convert customers with valuable, relevant content...</p>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardD.png" alt="">
-                                    <h3>Content Marketing</h3>
-                                    <ul>
-                                        <li>Blog Posts & Articles</li>
-                                        <li>Infographics & Visual Content</li>
-                                        <li>Video Scripts & Storyboarding</li>
-                                        <li>Email Newsletters</li>
-                                        <li>Distribution</li>
-                                    </ul>
-                                    <button class="flip-btn">Read More</button>
-                                </div>
-                            </div>
+                        <div class="flex-fill h-100">
+                            <img src="./assets/images/banner-bg.png" class="w-100 h-100 object-fit-cover"
+                                alt="Right Image">
                         </div>
                     </div>
-
-                    <!-- Second Row: 2 Larger Cards (Split Layout) -->
-                    <div class="cards-wrapper digital-row digital-row-second">
-                        <!-- 5. Email Marketing -->
-                        <div class="flip-card large-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-split-layout">
-                                        <div class="card-text-side">
-                                            <h3>Email Marketing</h3>
-                                            <p>Nurture leads and retain customers with personalized email campaigns...
-                                            </p>
-                                        </div>
-                                        <div class="card-image-side">
-                                            <img src="https://images.klipfolio.com/website/public/bbe88afd-50ba-4fbf-9f30-0d0cff879d14/email-marketing-dashboard.png"
-                                                alt="Email Marketing Dashboard">
-                                        </div>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardA.png" alt="">
-                                    <h3>Email Marketing</h3>
-                                    <ul>
-                                        <li>List Building & Segmentation</li>
-                                        <li>Custom Email Template Design</li>
-                                        <li>Automated Workflows</li>
-                                        <li>Drip Campaigns & Newsletters</li>
-                                    </ul>
-                                    <button class=" large-flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. Web Design & Development -->
-                        <div class="flip-card large-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <div class="card-split-layout">
-                                        <div class="card-text-side">
-                                            <h3>Web Design & Development</h3>
-                                            <p>Conversion-focused websites that represent your brand and drive
-                                                results...</p>
-                                        </div>
-                                        <div class="card-image-side">
-                                            <img src="https://static.vecteezy.com/system/resources/previews/070/682/641/non_2x/workspace-showcasing-digital-devices-for-web-design-user-interface-and-responsive-website-development-on-a-modern-desk-photo.jpeg"
-                                                alt="Web Design & Development Mockup">
-                                        </div>
-                                        <div class="arrow-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <img src="./img/flip-cardD.png" alt="">
-                                    <h3>Web Design & Development</h3>
-                                    <ul>
-                                        <li>Responsive & Modern Designs</li>
-                                        <li>Conversion Rate Optimization</li>
-                                        <li>Mobile-First Approach</li>
-                                        <li>Fast Loading & SEO-Friendly</li>
-                                    </ul>
-                                    <button class="large-flip-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="carousel-caption d-none d-md-block text-dark">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-     </section>
-    <!-- About us -->
-     <section class="py-5 bg-about">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
-                <div class="col-md-5 tknockss-bg">
-                    <div class="rotate-layer">
-                        <img src="./assets/images/tknockss-A.png" class="orbit-img img1" alt="">
-                        <img src="./assets/images/tknockss-B.png" class="orbit-img img2" alt="">
-                        <img src="./assets/images/tknockss-C.png" class="orbit-img img3" alt="">
-                        <img src="./assets/images/tknockss-D.png" class="orbit-img img4" alt="">
-                        <img src="./assets/images/tknockss-E.png" class="orbit-img img5" alt="">
-                        <img src="./assets/images/tknockss-F.png" class="orbit-img img6" alt="">
-                        <img src="./assets/images/tknockss-G.png" class="orbit-img img7" alt="">
-                        <img src="./assets/images/tknockssa.png" class="orbit-img img8" alt="">
-                        <img src="./assets/images/tknockssb.png" class="orbit-img img9" alt="">
-                        <img src="./assets/images/tknockssc.png" class="orbit-img img10" alt="">
-                    </div>
-                     <img src="./assets/images/tknockss (1).png" class="center-logo" alt="">
-                    <div class="waves wave-inner"></div>
-                    <div class="waves wave-middle"></div>
-                    <div class="waves wave-outer"></div>
-                </div>
-                <div class="col-md-6 mx-2">
-                    <div>
-                        <h4 class="text-primary fw-bolder fs-2">About Us</h4>
-                        <h2 class="fs-1">Our <strong>Services for Home, Small office & Enterprises</strong> in making business hassle
-                            free</h2>
-
-                        <div class="text-secondary fs-3">
-                            <p><span>| </span><strong>Our user experience is the best in the industry; we are passionate
-                                    about our creative work based on responsive static and expert approaches.</strong>
-                            </p>
-                        </div>
-                        <p>TKNOCKS is a global information technology service provider located in India. We are an
-                            expert in providing website designing, Mobile Apps, Software Development, Information
-                            Technology Consulting and Digital Marketing services to clients worldwide. We deliver and
-                            maintain an exceptional customer service.</p>
-                        <div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mission-main">
-                                        <div class="iconImage"><img src="./assets/images/mision.png" alt=""></div>
-                                        <div class="about-mission">
-                                            <h3>Mission</h3>
-                                            <p>To become one of the world's leading high-value centres for Information
-                                                Technology services to both households and businesses.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="mission-main">
-                                        <div class="iconImage"><img src="./assets/images/vision.png" alt=""></div>
-                                        <div class="about-mission">
-                                            <h3>Vision</h3>
-                                            <p>Our unwavering 'quality first' attitude is driven by corporate values
-                                                instilled by our executive team.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="about-us.php" class="aboutBtn fw-bolder fs-6">Learn About Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
-     <!--Spark cards  -->
-     <section class="spark-services px-5">
-        <div class="container-fluid">
-            <div class="services-row three-col">
-                <div class="p-5">
-                    <h2 class="fw-bolder display-5">
-                        TKNOCKS Features
-                    </h2>
-                    <p>
-                        Based on your needs and requirements, we customize our services to fit those better and help you
-                        manage your investments from anywhere, at any time.
-                    </p>
-                    <a href="#requestbacks" class="spark-btn">
-                        Schedule a Free Consultation Call
-                    </a>
-                </div>
-                <div class="service-card light">
-                    <i class="fas fa-globe"></i>
-                    <h4>Global Standard</h4>
-                    <p>
-                        We deliver work as per international standard and positive difference in everything.
-                    </p>
-                </div>
-                <div class="service-card peach">
-                    <i class="fas fa-praying-hands"></i>
-                    <h4>End to End Solution</h4>
-                    <p>
-                        Design, development & contact center with virtual resource all under in one roof.
-                    </p>
-                </div>
-
-            </div>
-            <div class="services-row rowA three-col">
-
-                <div class="service-card blue">
-                    <i class="fab fa-python"></i>
-                    <h4>Creative Work</h4>
-                    <p>
-                        Our creative experts deliver best custom work as per business nature relevance.
-                    </p>
-                </div>
-
-                <div class="service-card peach">
-                    <i class="fa fa-credit-card"></i>
-                    <h4>Cost Effective</h4>
-                    <p>
-                        Cost effective solutions in clients budget to set aside savings as soon as you get paid.
-                    </p>
-                </div>
-
-                <div class="service-card blue">
-                    <i class="fa fa-comments"></i>
-                    <h4>Free Consultation</h4>
-                    <p>
-                        Connect with our subject matter experts any time for free consultation.
-                    </p>
-                </div>
-                <div class="service-card light">
-                    <i class="fa fa-comments"></i>
-                    <h4>Free Consultation</h4>
-                    <p>
-                        Connect with our subject matter experts any time for free consultation.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!--  -->
-   <footer class="footer">
-    <div class="topFooter position-relative">
-        <div class="container py-2">
-            <div class="newSletter">
-                <div class="inNewLtr">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="text-white">Stay up to date with the latest news!</h3>
-                            <p class="text-white m-0">Subscribe with Email and loads of interesting! <i class="fas fa-thumbs-up"></i></p>
-                        </div>
-                        <div class="col-sm-6">
-                            <form id="subscribe_form">
-                                <div class="formGroup">
-                                    <input type="text" placeholder="Enter Your Email" name="Email" class="Email"
-                                        id="email_newsletter">
-                                    <input type="submit" value="Subscribe" id="submit-newsletter" class="SubscribeBtn">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="midfooter pt-100">
-                    <div class="container pt-5">
-        <div class="row justify-content-center text-left">
-            <div class="col-md-3 border-vertical">
-                <div class="footer-vertical-line"></div>
-                <div>
-                    <a href="#" class="text-center"><img src="./assets/images/image copy.png" alt="" class="img-resize"></a>
-                    <p class="text-white ff px-3 pt-2 fs">TKNOCKS Objective to offer a  <br>
-                        solution for any Information <br> Technology challenges which <br>
-                         hammering Business efficiency <br> and Profits.
-                    </p>
-                    <div class="pt-3">
-                        <h5 class="text-white px-2">About Tknocks</h5>
-                        <div class="call-btn">
-                            <div class="text-white">
-                                <a class="text-white text-decoration-none" href="contact-us"><i class="fa-solid fa-phone-volume"></i> Request A Callback</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-           
-             <div class="col-md-3">
-                <h2 class="text-white">Useful <span class="text-primary"> Link</span></h2>
-                <div>
-                    <ul class="list-unstyled ff fs">
-                        <li class="line-hover"><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="text-decoration-none pb-2"> About Us</a></li>
-                        <li class="line-hover"><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i><a href="#" class="text-decoration-none pb-2"> Contact Us</a></li>
-                        <li class="line-hover"><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i><a href="#" class="text-decoration-none pb-2"> Portfolio</a></li>
-                        <li class="line-hover"><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i><a href="#" class="text-decoration-none pb-2"> Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-                   
-            <div class="col-md-3">
-                 <h2 class="text-white ff">Our<span class="text-primary"> Services</span></h2>
-                  <div>
-                    <ul class="list-unstyled ff fs">
-                        <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="dif" class="text-decoration-none"> Digital Marketing</a></li>
-                        <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="text-decoration-none"> Design & developement</a></li>
-                        <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="text-decoration-none"> It Consulting</a></li>
-                        <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="text-decoration-none"> Virtual Staffing</a></li>
-                        <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="text-decoration-none"> Website Design</a></li>
-                    </ul>
-                </div>
-            </div>
-               <div class="col-md-3 border-vertical-2">
-                  <h2 class="text-white ff">Our<span class="text-primary"> Contact</span></h2>
-                  <div>
-                    <ul class="list-unstyled fs">
-                        <li class="text-white ff">F-47, 1st Floor, Milap Nagar, Uttam Nagar, New Delhi - 110059</li>
-                        <li><a href="tel:9568115511" class="text-white fs-16 text-capitalize text-decoration-none"> +91 9568115511 </a></li>
-                        <li><a href="mailto:info@tknocks.in" class="text-white fs-16 text-capitalize text-decoration-none"> info@tknocks.in</a></li>
-                        <li><a href="skype:live:.cid.a5bdbf0f1812398a" class="text-white fs-16 text-capitalize text-decoration-none"> info@tknocks.in</a></li>
-                    </ul>
-                  </div>
-            </div>
-        </div>
-    </div>
-                <div class="footer-horizontal-line"></div>
-           <div class="lastfooter lastfooter-bg py-4">
-            <div class="container">
-                <div class="row justify-content-center text-white">
-                    <div class="col-md-3">
-                        <div class="text-primary">General Enquiry</div>
-                        <p class="footer-email text-white">
-                                <i class="far fa-envelope"></i>
-                                <a href="mailto:info@tknocks.in" class="text-white fs text-decoration-none">info@tknocks.in</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="text-primary">Support</div>
-                        <p class="footer-email text-white">
-                                <i class="far fa-envelope"></i>
-                                <a href="mailto:support@tknocks.in" class="text-white fs text-decoration-none">Support@tknocks.in</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="text-primary">Career</div>
-                        <p class="footer-email text-white">
-                                <i class="far fa-envelope"></i>
-                                <a href="mailto:info@tknocks.in" class="text-white fs-16">info@tknocks.in</a>
-                            </p>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="text-primary">Follow Us</div>
-                        <div class="orrish-follow">
-                            <ul class="d-flex gap-2">
-                                <li class="facebook px-2">
-                                    <a href="https://www.facebook.com/TKNOCKS.SERVICES/" target="_blank">
-                                        <i class="fab fa-facebook-f text-white"></i>
-                                    </a>
-                                </li>
-
-                                <li class="twitter px-2">
-                                    <a href="https://twitter.com/TECH_KNOCKS" target="_blank">
-                                        <i class="fab fa-twitter text-white"></i>
-                                    </a>
-                                </li>
-
-                                <li class="linkedin">
-                                    <a href="https://www.linkedin.com/company/tknocks-technical-services-private-limited/?viewAsMember=true" target="_blank">
-                                        <i class="fab fa-linkedin text-white"></i>
-                                    </a>
-                                </li>
-
-                                <li class="skype">
-                                    <a href="#">
-                                        <i class="fab fa-skype text-white"></i>
-                                    </a>
-                                </li>
-
-                                <li class="instagram">
-                                    <a href="https://www.instagram.com/tknocks.services/?next=%2F" target="_blank">
-                                        <i class="fab fa-instagram text-white"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-horizontal-line"></div>
-                <div class="bottom-footer">
-                    <div class="container">
-                        <div class="row justify-content-between">
-                        <div class="col-md-5 fs">
-                       <p class="text-white pt-3">Copyright© 2025-2026 Tknocks Pvt Ltd. | All rights reserved</p>
-                    </div>
-                    <div class="col-md-5 fs-5">
-                       <p class="text-white pt-3">Privacy & Policy <span class="text-primary">|</span> Terms & Use <span class="text-primary">|</span> Refund & Concellation</p>
-                    </div>
-                   
-                    
                 </div>
             </div>
         </div>
-                
-            <div class="bottomBorder"></div>
-            
-        </div>
-
-    </div>
-</footer> 
-
-
+    </section>
+    <!-- Hero Section End -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

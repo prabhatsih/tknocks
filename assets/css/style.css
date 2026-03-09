@@ -1,24 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,303;1,303&display=swap');
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --light-bg: #f8f9fa;
-    --dark-text: #343a40;
-    --light-text: #f8f9fa;
-    --border-color: #dee2e6;
-    --sidebar-width: 320px;
-    --header-height: 70px; /* Assuming a fixed header height */
-}
-.ls-1 { letter-spacing: 1px; }
-.ls-2 { letter-spacing: 2px; }
-.ls-3 { letter-spacing: 3px; }
-.ls-05 { letter-spacing: 0.5px; }
+    --tk-bg: #f3f8fc;
+    --tk-text: #11263b;
+    --tk-muted: #5d7388;
+    --tk-border: #d6e4ef;
+    --tk-primary: #2878b8;
+    --tk-surface: #ffffffff;
+    --tk-primary-rgb: 40, 120, 184;
 
-*{
+    /* Bootstrap mapping */
+    --bs-body-bg: var(--tk-bg);
+    --bs-body-color: var(--tk-text);
+    --bs-primary: var(--tk-primary);
+    --bs-border-color: var(--tk-border);
+    --bs-primary-rgb: var(--tk-primary-rgb);
+}
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 .container-c{
     max-width: 1200px;
@@ -179,178 +182,30 @@ body.has-left-bar .main-content {
     background-color: var(--light-bg);
 }
 
-.social-icons a {
-    color: var(--secondary-color);
-    transition: color 0.2s;
+.ls-sm {
+    letter-spacing: 0.02em;
 }
 
-.social-icons a:hover {
-    color: var(--primary-color);
+.ls-md {
+    letter-spacing: 0.05em;
 }
 
-.contact-details {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
+.ls-lg {
+    letter-spacing: 0.1em;
 }
 
-.contact-details p {
-    margin: 5px 0;
+.ls-xl {
+    letter-spacing: 0.2em;
 }
 
-/* Right Contact Bar */
-.right-contact-bar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    border-radius: 10px 0 0 10px;
-    z-index: 1040;
+.brand-logo {
+    height: 37px;
+    object-fit: contain;
 }
 
-.contact-icon {
-    padding: 15px;
-    font-size: 20px;
-    color: var(--secondary-color);
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.contact-icon:hover {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-}
-
-.right-contact-bar a:first-child {
-    border-radius: 10px 0 0 0;
-}
-
-.right-contact-bar a:last-child {
-    border-radius: 0 0 0 10px;
-}
-
-/* Main Content and Banner Styles */
-.main-content {
-    padding-left: 100px; /* Space for the left icon bar */
-    padding-right: 50px; /* Space for the right contact bar */
-}
-
-@media (max-width: 992px) {
-    .main-content {
-        padding-left: 15px; /* Less padding on smaller screens */
-        padding-right: 15px;
-    }
-    body {
-        padding-top: 60px; /* Adjust if header height changes on mobile */
-    }
-}
-
-.banner-container {
-    position: relative;
-}
-
-.banner-slide {
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-/* You can use different background images for each slide */
-.slide-1 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/tknocks.jpeg');}
-.slide-2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/tknocks.jpeg');}
-.slide-3 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/tknocks.jpeg');}
-.banner-content h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-}
-.banner-content h1 strong {font-weight: 700;}
-
-.banner-content p {
-    font-size: 1.1rem;
-    margin: 20px 0;
-}
-
-/* Services Carousel */
-.services-carousel-container {
-    position: relative;
-    margin-top: -80px; /* Overlap the banner */
-    z-index: 10;
-}
-
-.service-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card a {
-    text-decoration: none;
-    color: var(--dark-text);
-}
-
-.service-icon img {
-    max-width: 60px;
-    margin-bottom: 15px;
-}
-
-.service-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-}
-
-/* Logo Scroller Section */
-.logo-slider-section {
-    background-color: #fff;
-}
-
-.logo-scroller {
-    overflow: hidden;
-    padding: 20px 0;
-    white-space: nowrap;
-    position: relative;
-}
-
-.logo-scroller:before,
-.logo-scroller:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    z-index: 2;
-}
-
-.logo-scroller:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
-}
-
-.logo-scroller:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
-}
-
-
-.logo-scroller-inner {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll 30s linear infinite;
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
 }
 
 .logo-scroller-inner img {
