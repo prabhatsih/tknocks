@@ -140,4 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
+// get a quote here 
+document.querySelector('.upload-area').addEventListener('click', () => {
+      document.getElementById('fileInput').click();
+    });
