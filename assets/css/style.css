@@ -406,3 +406,10 @@
 }
 
 /* About us section End */
+
+/* Contact and Blog Section Start */
+.contact-blog-section {
+    background: linear-gradient(to bottom, #1f6fb2 0%, #1f6fb2 50%, #fff 50%, #fff 100%);
+}
+
+/* Contact and Blog Section End */
