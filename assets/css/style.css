@@ -149,6 +149,89 @@
 
 /* Left Side Navbar End */
 
+/* Right Side Contact Icon Section Start */
+.contact-bar {
+    z-index: 9999;
+}
+
+.contact-item {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: white;
+    transition: width .35s ease;
+    border-radius: 6px 0 0 6px;
+}
+
+/* expand on hover */
+.contact-bar {
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* each item expands independently */
+.contact-item {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: white;
+    transition: width .35s ease;
+    border-radius: 6px 0 0 6px;
+}
+
+/* expand only hovered item */
+.contact-bar {
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-item {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    transition: all .35s ease;
+    border-radius: 10px 0 0 10px;
+}
+
+.contact-item:hover {
+    width: 226px;
+}
+
+.contact-item:hover {
+    width: 220px;
+    margin-left: -175px;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background: #0d6efd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-text {
+    padding-left: 12px;
+    white-space: nowrap;
+    color: #000;
+}
+
+/* Right Side Contact Icon Section End */
+
 /* Partner Logo Section Start */
 .partner-logo {
     width: 160px;
@@ -174,6 +257,26 @@
 }
 
 /* Partner Logo Section End */
+
+/* Service Slider Section Start */
+.service-box div::after {
+    content: "";
+    left: 0.7;
+    right: 0.7;
+    width: 94%;
+    bottom: 2px;
+    height: 2px;
+    position: absolute;
+    background: #0d6efd;
+    transition: opacity .2s ease;
+}
+
+.service-box:hover div::after {
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+/* Service Slider Section End */
 
 /* Our Sevice Section Start */
 .flip-main {
