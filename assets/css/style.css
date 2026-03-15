@@ -1,4 +1,5 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --tk-bg: #f3f8fc;
@@ -20,8 +21,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-weight: bold;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Raleway", "Poppins", sans-serif;
+}
+
+.fs-12 {
+    font-size: 12px;
 }
 
 .fs-14 {
@@ -126,6 +132,7 @@
 
 /* Left Side Navbar Start */
 .left-sidebar {
+    z-index: 9;
     width: 5.2%;
     transition: all .3s ease;
 }
@@ -510,9 +517,152 @@
 
 /* About us section End */
 
+/* Our Teams Section Start */
+@media (max-width: 767.9px) {
+    .our-teams {
+        background: #0d6efd;
+        padding: 20px 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .our-teams {
+        padding-top: 70px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../images/teamManagement.png');
+    }
+}
+
+.team-slider {
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.team-track {
+    display: flex;
+    gap: 30px;
+    transition: transform .5s ease;
+}
+
+.team-slide {
+    flex: 0 0 calc(25% - 22.5px);
+    display: flex;
+    justify-content: center;
+}
+
+.team-card {
+    position: relative;
+    width: fit-content;
+    border-radius: 12px;
+    height: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.team-img {
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-info {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eee;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    text-align: center;
+}
+
+.team-info h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.team-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #0d6efd;
+}
+
+.team-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-btn:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+@media(max-width:991px) {
+    .team-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media(max-width:576px) {
+    .team-slide {
+        flex: 0 0 100%;
+    }
+}
+
+/* Our Teams Section End */
+
 /* Contact and Blog Section Start */
 .contact-blog-section {
     background: linear-gradient(to bottom, #1f6fb2 0%, #1f6fb2 50%, #fff 50%, #fff 100%);
 }
 
+.contact-ui-head::after {
+    content: '';
+    width: 70px;
+    height: 4px;
+    display: block;
+    margin: 15px 0px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2563eb, #8715ef);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.service-track {
+    width: max-content;
+    animation: scrollService 18s linear infinite;
+}
+
+@keyframes scrollService {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.service-track:hover {
+    animation-play-state: paused;
+}
+
 /* Contact and Blog Section End */
+
+/* Footer Section Start */
+
+/* Footer Section End */
