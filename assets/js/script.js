@@ -11,6 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", handleNavbarScroll, { passive: true });
 
+  // Left Sidebar Hover Expand
+  const leftSidebar = document.querySelector(".left-sidebar");
+  const sidebarExpanded = document.getElementById("sidebarExpanded");
+
+  if (leftSidebar && sidebarExpanded) {
+    let hideTimer;
+
+    function showSidebar() {
+      clearTimeout(hideTimer);
+      sidebarExpanded.classList.add("sidebar-expanded--visible");
+    }
+
+    function hideSidebar() {
+      hideTimer = setTimeout(() => {
+        sidebarExpanded.classList.remove("sidebar-expanded--visible");
+      }, 120);
+    }
+
+    leftSidebar.addEventListener("mouseenter", showSidebar);
+    leftSidebar.addEventListener("mouseleave", hideSidebar);
+    sidebarExpanded.addEventListener("mouseenter", showSidebar);
+    sidebarExpanded.addEventListener("mouseleave", hideSidebar);
+  }
+
+  //Index Page Hero section Text Slider
   const track = document.querySelector("#textSlider .text-track");
   const slides = document.querySelectorAll("#textSlider .text-slide");
 
