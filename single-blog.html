@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog |TKNOCKS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <style>
+    .comment-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .comment-avatar {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .comment-header {
+      font-weight: 600;
+      color: #222;
+    }
+
+    .comment-date {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .reply-btn {
+      padding: 8px 24px;
+      font-weight: 500;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 576px) {
+      .comment-avatar {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .comment-box {
+        padding: 16px !important;
+      }
+    }
+  
+    .quote-card {
+            background: #0a2540;
+            color: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            max-width: 350px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-control {
+            background: white;
+            border: none;
+            padding: 4px 16px;
+            color: #333;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.4);
+            outline: none;
+        }
+
+        .btn-submit {
+            background: #ffd700;
+            color: #0a2540;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #636254;
+            transform: translateY(-px);
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container align-items-center">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/images/name-logo.png"
+            alt="Tknocks"
+            class="brand-logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 fw-semibold ls-sm text-white"
+                href="./carousal-slider.html"
+                >PROFILE</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 fw-semibold ls-sm text-white"
+                href="./portfolio.html"
+                >PORTFOLIO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 fw-semibold ls-sm text-white"
+                href="./contact-us.html"
+                >CONTACT US</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link fs-4 pb-lg-2 fw-semibold active"
+                aria-current="page"
+                href="./index.html"
+              >
+                <i class="fa fa-home text-warning"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Section End -->
+    <!-- Left Side Navbar Section Start -->
+    <div
+      class="bg-white bg-opacity-50 position-fixed top-0 start-0 rounded-end-4 d-none d-lg-block vh-100 left-sidebar"  style="z-index: 999;"
+    >
+      <div
+        class="d-flex align-items-start flex-column justify-content-between h-100 pb-5 z-index-9999"
+      >
+        <div>
+         <img src="./assets/images/tknocks.jpeg" alt="tknocks" width="80px">
+                <div class="side-line"></div>
+        </div>
+        <div
+          class="bg-primary rounded-5 left-sidebar-menu"
+          style="padding: 7px 13px; margin-left: 13px"
+        >
+          <a href="#" class="d-block py-2">
+            <i class="fas fa-home fs-4 text-white"></i>
+          </a>
+          <a href="#" class="d-block py-2">
+            <i class="fas fa-user fs-4 text-white"></i>
+          </a>
+          <a href="#" class="d-block py-2">
+            <i class="fas fa-folder-open fs-4 text-white"></i>
+          </a>
+          <a href="#" class="d-block py-2">
+            <i class="fas fa-blog fs-4 text-white"></i>
+          </a>
+          <a href="#" class="d-block py-2">
+            <i class="fas fa-phone fs-4 text-white"></i>
+          </a>
+        </div>
+        <div>
+          <a
+            href="#"
+            style="height: 55px; width: 55px; margin-left: 13px"
+            class="d-block py-3 bg-primary rounded-circle align-items-center justify-content-center d-flex"
+          >
+            <i class="fas fa-envelope fs-4 text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Left Side Navbar Section End -->
+    <!-- Left Side Navbar Section on hover Start -->
+    <div class="sidebar-expanded position-fixed top-0 start-0 vh-100 d-none d-lg-flex" id="sidebarExpanded">
+        <div class="sidebar-left-panel d-flex flex-column justify-content-between ps-2 px-2">
+            <div class="text-center g-2">
+                <img src="./assets/images/logoo.png" alt="TKNOCKS" class="mt-2" width="100%">
+            </div>
+            <div class="rounded-4 px-2 py-2 mx-1 my-3 g-4" style="background: #ffffff0f;">
+                <a href="./index.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-home fs-5"></i><span>Home</span>
+                </a>
+                <a href="./about-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-user fs-5"></i><span>About</span>
+                </a>
+                <a href="./portfolio.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-folder-open fs-5"></i><span>Projects</span>
+                </a>
+                <a href="./blog.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-blog fs-5"></i><span>Blogs</span>
+                </a>
+                <a href="./get-a-quote.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone fs-5"></i><span>Get a Quote</span>
+                </a>
+                <a href="./scheluded-meet.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-calendar-check fs-5"></i><span>Schedule a meeting</span>
+                </a>
+                <a href="./contact-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone-alt fs-5"></i><span>Contact</span>
+                </a>
+            </div>
+            <div class="px-2 mb-3">
+                <a href="./contact-us.html"
+                    class="sidebar-connect-btn d-flex align-items-center justify-content-center gap-2 text-decoration-none rounded-pill py-2 px-3 mb-3">
+                    Connect <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <a href="#" class="sidebar-social-icon">
+                        <i class="fab fa-instagram fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-facebook fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-linkedin fs-4"></i>
+                    </a>
+                </div>
+                <div class="text-center sidebar-contact-info">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <i class="fas fa-phone-square-alt text-primary fs-4"></i>
+                        <span class="fs-18">+91-9123107775</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <i class="fas fa-envelope text-primary fs-4"></i>
+                        <span class="fs-18">info@tknocks.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="sidebar-right-panel d-flex flex-column justify-content-center align-items-center py-4 px-1 rounded-end-4">
+            <a href="./design-development.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/website-design-services.png" alt="Design" width="38" class="mb-1">
+                <span class="fw-bold">Design &amp; Development</span>
+            </a>
+            <a href="./digital-marketing.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/digital-marketinglogo.png" alt="Digital Marketing" width="38" class="mb-1">
+                <span class="fw-bold">Digital<br>Marketing</span>
+            </a>
+            <a href="./mobileapp-design.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/app-mobile.png" alt="Mobile App" width="38" class="mb-1">
+                <span class="fw-bold">Mobile<br>App Dev.</span>
+            </a>
+            <a href="./it-consulting.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/it-consulting.png" alt="IT Consulting" width="38" class="mb-1">
+                <span class="fw-bold">IT<br>Consulting</span>
+            </a>
+            <a href="./virtual-staff.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none ls-lg">
+                <img src="./assets/images/support.png" alt="Virtual Staffing" width="38" class="mb-1">
+                <span class="fw-bold">Virtual<br>Staffing</span>
+            </a>
+        </div>
+    </div>
+    <!-- Left Side Navbar Section on hover End -->
+     <!-- Right Side Contact Icon Start -->
+    <div class="contact-bar position-fixed top-50 end-0 translate-middle-y">
+        <a href="tel:9568115511" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/tel-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">+91-9568115511</span>
+        </a>
+        <a href="#" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/skype.png" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">Skype</span>
+        </a>
+        <a href="mailto:info@tknocks.in" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/email-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">info@tknocks.in</span>
+        </mailto:info@tknocks.in>
+        <a href="https://api.whatsapp.com/send?phone=+919568115511&text=Welcome%20to%20TKNOCKS%20TECHNICAL%20SERVICES%20PVT.LTD.%20We%20provide%20best%20Information%20Technology%20solutions%20for%20Software%20/%20Web%20Development,%20Digital%20Marketing,%20IT%20consulting%20and%20virtual%20Staffing....." class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <!-- <i class="fab fa-whatsapp"></i> -->
+                <img src="./assets/images/whatsapp-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">+91-9568115511</span>
+        </a>
+    </div>
+    <!-- Right Side Contact Icon End -->
+    <!-- top-banner started -->
+   <section class="blog-hero">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-8 col-12 blog-img py-5">
+
+                <h1 class="py-2 text-color px-5">
+                    BLOG: Lets share knowledge together
+                </h1>
+
+                <i class="text-secondary px-5">
+                    Fully Managed SEO Services to help keep your marketing on track
+                </i>
+
+                <p class="py-3 text-white px-5">
+                    Explore insightful articles, expert tips, and the latest industry trends
+                    on our blog. <br> Stay updated with valuable content designed to inform,
+                    inspire, and grow your business.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- top banner ended -->
+  <!-- section-2 started----------------------------- -->
+   	<div class="bg-light pt-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div>
+									<img src="./assets/images/blog-girl.png" alt="single-blog" class="img-fluid rounded-5">
+								</div>
+								<div class="fs-18 pt-4">
+									<h5>Awesome Article Money of Cumpus Life.</h5>
+                      <div class="text-primary fw-semibold">8 sept. 2020 - Posted by:admin</div>
+                      <hr>
+									<p class="fs-14 pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                         an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                          It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                                           sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                                           like Aldus PageMaker including versions of Lorem Ipsum. 
+									                      	Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                         Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
+                                          obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
+                                           word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, 
+                                            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+                                             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+									</p>
+								</div>
+								<div class="article-sec2">
+									<img src="./assets/images/blog-single2.png" alt="blog-single2" class="img-fluid rounded-4">
+								</div>
+								<div class="row pt-4">
+									<div class="col-md-6">
+										<h5 class="fw-bolder">The Guest Series</h5>
+										<p class="fs-14">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  </p>
+									</div>
+									<div class="col-md-6">
+										<h5 class="fw-bolder">How And Why</h5>
+										<p class="fs-14"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+										</p>
+									</div>
+								</div>
+								<div class="border-top border-bottom border-primary-subtle py-4">
+									<div class="col-md-12">
+										<div class="text-primary px-4">
+                    <i class="fs-18 fw-semibold">" It has survived not only five centuries, but also the leap into electronic typesetting, 
+                    <br> remaining essentially unchanged. 
+										</i>
+                    </div>
+									</div>  
+								</div>   
+								<div class="text-primary pt-5">
+									<div class="fw-bold fs-4">Comments</div>
+                  <!-- comment 1 -->
+                <div class="p-3 p-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                      <img src="./assets/images/avatar_author.jpg" 
+                           alt="Angela De" 
+                           class="rounded-circle comment-avatar">
+                    
+                      <div class="flex-grow-1">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start">
+                          <div>
+                            <h6 class="comment-header mb-1">Angela De</h6>
+                            <small class="comment-date">September 11 2020 at 9:00 am</small>
+                          </div>
+                        </div>
+                      
+                        <p class="mt-3 mb-3 text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor. 
+                          Suspendisse gravida sem sit amet molestie portitor?
+                        </p>
+                      
+                        <button class="btn btn-primary reply-btn">Reply</button>
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                    <!-- c00ment 2 -->
+                       <div class="p-3 p-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                      <img src="./assets/images/avatar_user_1.jpg" 
+                           alt="Angela De" 
+                           class="rounded-circle comment-avatar">
+                    
+                      <div class="flex-grow-1">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start">
+                          <div>
+                            <h6 class="comment-header mb-1">Angela De</h6>
+                            <small class="comment-date">September 11 2020 at 9:00 am</small>
+                          </div>
+                        </div>
+                      
+                        <p class="mt-3 mb-3 text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor. 
+                          Suspendisse gravida sem sit amet molestie portitor?
+                        </p>
+                      
+                        <button class="btn btn-primary reply-btn">Reply</button>
+                      </div>
+                    </div>
+                        </div>
+                        <hr>
+                <!-- comment 3 -->
+                  <div class="px-5">
+                    <div class="p-3 p-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                      <img src="./assets/images/avatar_user_2.jpg" 
+                           alt="Angela De" 
+                           class="rounded-circle comment-avatar">
+                    
+                      <div class="flex-grow-1">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start">
+                          <div>
+                            <h6 class="comment-header mb-1">Angela De</h6>
+                            <small class="comment-date">September 11 2020 at 9:00 am</small>
+                          </div>
+                        </div>
+                      
+                        <p class="mt-3 mb-3 text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor. 
+                          Suspendisse gravida sem sit amet molestie portitor?
+                        </p>
+                      
+                        <button class="btn btn-primary reply-btn">Reply</button>
+                      </div>
+                    </div>
+                </div>
+                  </div>
+                  <div class=" border border-bottom border-2"></div>
+                  <!-- comment 4 -->
+                  <div class="p-3 p-md-4 mb-4">
+                    <div class="d-flex gap-3">
+                      <img src="./assets/images/avatar_user_1.jpg" 
+                           alt="Angela De" 
+                           class="rounded-circle comment-avatar">
+                    
+                      <div class="flex-grow-1">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start">
+                          <div>
+                            <h6 class="comment-header mb-1">Angela De</h6>
+                            <small class="comment-date">September 11 2020 at 9:00 am</small>
+                          </div>
+                        </div>
+                      
+                        <p class="mt-3 mb-3 text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor. 
+                          Suspendisse gravida sem sit amet molestie portitor?
+                        </p>
+                      
+                        <button class="btn btn-primary reply-btn">Reply</button>
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- form container----- -->
+                <div class="container pb">
+    <div class="bg-light">
+
+      <form>
+        <!-- Name Fields -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="John" value="John">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Doe" value="Doe">
+          </div>
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="mb-4">
+          <textarea class="form-control" rows="6" placeholder="Write your comment here..."></textarea>
+        </div>
+
+        <!-- Send Button -->
+        <button type="submit" class="btn btn-send bg-primary text-white">
+          Send Now
+        </button>
+      </form>
+
+    </div>
+  </div>
+                
+  <div class="pb-5"></div>
+
+
+							</div>
+						
+						</div>
+            <!-- col col -->
+            
+              	<div class="col-md-4">
+								<div class="mb-4">
+                   <div class="input-group">
+                       <input type="text" class="form-control search-box" placeholder="type and hit enter" aria-label="Search">
+                       <button class="btn btn-light border" type="button">  🔍 </button>
+                     </div>
+                  </div>
+								<div class="list-category-group">
+									<ul class="list-group">
+										<li class="list-group-item"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-dark px-2"> Cras justo odio</a></li>
+										<li class="list-group-item"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-dark px-2"> Dapibus ac facilisis in</a></li>
+										<li class="list-group-item active"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-light px-2"> Morbi leo risus</a></li>
+										<li class="list-group-item"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-dark px-2"> Porta ac consectetur ac</a></li>
+										<li class="list-group-item"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-dark px-2"> VestibulumVestibulum at eros</a></li>
+										<li class="list-group-item"><i class="fas fa-chevron-right"></i><a href="#" class="text-decoration-none fs-14 text-dark px-2"> Vestibulum at eros</a></li>
+									</ul>
+								</div>
+							<div class="list-category-group2">
+								<div class="bg-white rounded-3 p-3 shadow-sm">
+                   <div class="d-flex flex-wrap gap-2 mb-3">
+                     <button class="btn border border-secondary-subtle shadow-md">university</button>
+                     <button class="btn active border border-secondary-subtle bg-primary text-white">Alumni</button>
+                     <button class="btn border border-secondary-subtle">Custom</button>
+                   </div>
+
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn border border-secondary-subtle">Our Campus</button>
+                    <button class="btn border border-secondary-subtle">Our Team</button>
+                    <button class="btn border border-secondary-subtle">Classic</button>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2">
+                    <button class="btn border border-secondary-subtle">Art</button>
+                    <button class="btn border border-secondary-subtle">Together</button>
+                  </div>
+                </div>
+                 <!--contact form  -->
+                 <div class="pt-5"></div>
+                 <div class="quote-card mx-auto">
+        
+        <h1 class="text-left fs-5 fw-bold mb-2">Get free quote now</h1>
+        <p class="text-left mb-4 opacity-75">You will receive quote within 24 hrs</p>
+
+        <form>
+            <div class="mb-2">
+                <input type="text" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-2">
+                <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="mb-2">
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Describe your requirements..."></textarea>
+            </div>
+
+            <div class="text-center mb-4 opacity-75">
+                We respect your privacy
+            </div>
+
+            <button type="submit" class="btn btn-submit w-100">
+                SUBMIT
+            </button>
+        </form>
+
+                 </div>
+              <!--  -->
+    <div class="py-5"></div>
+							</div>
+							</div>
+            </div>
+					</div>
+				
+				</div>
+        <div class="pb-5"></div>
+    <!-- section-2 ended-------------------------------- -->
+    <!-- Footer Section Start -->
+    <section
+      class="pt-5 text-light position-relative"
+      style="background: #070e13;"
+    >
+      <!-- NewsLetter Section Start -->
+      <div
+        class="container position-absolute top-0 start-0 end-0"
+        style="margin-top: -60px"
+      >
+        <div class="position-relative">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-12">
+              <div class="p-lg-3 rounded-4" style="background: #3097ef">
+                <div
+                  class="d-flex flex-lg-row flex-column justify-content-between align-items-center p-4"
+                >
+                  <div class="text-white mb-lg-0 mb-3">
+                    <div class="mb-1 ls-md fw-medium fs-4">
+                      Stay up to date with the latest news!
+                    </div>
+                    <div class="fs-12 ls-md fw-medium fs-15">
+                      Subscribe with Email and loads of interesting! 👍
+                    </div>
+                  </div>
+
+                  <div
+                    class="input-group position-relative bg-white rounded-pill py-1 border-2"
+                    style="max-width: 400px"
+                  >
+                    <input
+                      type="email"
+                      class="form-control rounded-pill fs-14 fw-medium ls-md border-0"
+                      placeholder="Enter Your Email"
+                    />
+                    <button class="btn btn-primary rounded-pill px-4 py-2 me-1">
+                      SUBSCRIBE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NewsLetter Section End -->
+      <div class="container mt-5">
+        <div class="row justify-content-center pt-4">
+          <div class="col-lg-11">
+            <div class="row gy-4 mt-1 mt-lg-0 border-bottom border-dark-subtle">
+              <div class="mb-2" style="margin-left: -10px">
+                <img src="./assets/images/name-logo.png" alt="" width="200px" />
+              </div>
+              <div
+                class="col-lg-3 col-md-6 mt-0 border-end border-secondary pe-lg-3 pb-2"
+              >
+                <p class="fs-18">
+                  TKNOCKS Objective To Offer A Solution For Any Information
+                  Technology Challenges Which Hammering Business Efficiency And
+                  Profits.
+                </p>
+                <p class="mb-3 mt-5">About Tknocks</p>
+                <button
+                  class="btn btn-primary btn-md py-3 rounded-3 d-flex gap-2 align-items-center ls-md"
+                >
+                  <!-- <i class="fas fa-phone me-2"></i> -->
+                  <img
+                    src="./assets/images/requestAcallback.png"
+                    alt="call_back"
+                    width="30"
+                  />
+                  Request A Callback
+                </button>
+              </div>
+              <div class="col-lg-6 mt-lg-0 border-end border-dark-subtle">
+                <div class="row">
+                  <div class="col-lg-6 ps-lg-3">
+                    <h5 class="border-start border-primary border-3 ps-2">
+                      Useful <span class="text-primary fw-bold">Links</span>
+                    </h5>
+                    <ul class="list-unstyled mt-3">
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./about-us.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">About Us</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./contact-us.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">Contact Us</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./portfolio.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">Portfolio</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./profile.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link"> Profile</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <h5 class="border-start border-primary border-3 ps-2">
+                      Our <span class="text-primary fw-bold">Services</span>
+                    </h5>
+                    <ul class="list-unstyled small mt-3">
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./digital-marketing.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link"> Digital Marketing</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./design-development.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">Design & Development</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./it-consulting.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">IT Consulting</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./virtual-staff.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link">Virtual Staffing</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="fs-18 py-1 text-decoration-none text-white"
+                          href="./website-design.html"
+                        >
+                          <i class="fa-solid fa-angles-right text-primary"></i>
+                          <span class="bottom-link"> Website Design</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-11">
+                    <hr class="border-white" />
+                    <p class="mt-3 mb-2 fs-18">
+                      Pay <span class="fw-bold text-primary">Online</span>
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mb-2">
+                      <img
+                        src="assets/images/apppay.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                      <img
+                        src="assets/images/visa.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                      <img
+                        src="assets/images/rupy.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                      <img
+                        src="assets/images/paytm.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                      <img
+                        src="assets/images/pay.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                      <img
+                        src="assets/images/gpay.jpg"
+                        height="32"
+                        class="rounded-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-lg-0">
+                <h5 class="border-start border-primary border-3 ps-2">
+                  Our <span class="text-primary fw-bold">Contact</span>
+                </h5>
+                <p class="fs-18 text-white mt-3">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  F-47, 1st Floor, Milap Nagar, Uttam Nagar, New Delhi - 110059
+                </p>
+
+                <p class="fs-18">
+                  <i class="fas fa-phone me-2"></i>
+                  <span class="hover-color">+91 9568115511</span>
+                </p>
+
+                <p class="fs-18">
+                  <i class="fas fa-envelope me-2"></i>
+                  <span class="hover-color">info@tknocks.in</span>
+                </p>
+
+                <p class="fs-18">
+                  <i class="fab fa-skype me-2"></i>
+                  <span class="hover-color">info@tknocks.in</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact Row -->
+            <div
+              class="row text-center text-md-start py-3 border-bottom border-dark-subtle"
+              style="background-color: #9795950d"
+            >
+              <div class="col-md-3">
+                <h6 class="text-primary fs-5">General Enquiry</h6>
+                <span class="text-white fs-16"
+                  ><span class="hover-color"
+                    ><i class="fa-regular fa-envelope"></i>
+                    info@tknocks.in</span
+                  ></span
+                >
+              </div>
+
+              <div class="col-md-3">
+                <h6 class="text-primary fs-5">Support</h6>
+                <span class="text-white fs-16"
+                  ><span class="hover-color"
+                    ><i class="fa-regular fa-envelope"></i>
+                    support@tknocks.in</span
+                  ></span
+                >
+              </div>
+
+              <div class="col-md-3">
+                <h6 class="text-primary fs-5">Career</h6>
+                <span class="text-white fs-16"
+                  ><span class="hover-color"
+                    ><i class="fa-regular fa-envelope"></i>
+                    info@tknocks.in</span
+                  ></span
+                >
+              </div>
+
+              <div class="col-md-3 mt-3 mt-md-0">
+                <h6 class="text-primary fs-5">Follow Us</h6>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-primary btn-md upward"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-info btn-md text-white upward"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-primary btn-md upward"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a class="btn btn-warning btn-md text-white upward"
+                    ><i class="fab fa-skype"></i
+                  ></a>
+                  <a class="btn btn-danger btn-md upward"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row text-white text-center text-md-start py-3">
+              <div class="col-md-6 mb-0 hover-color">
+                Copyright© 2025-2026
+                <span class="bottom-link">Tknocks Pvt Ltd.</span> | All rights
+                reserved
+              </div>
+              <div class="col-md-6 mb-0 text-md-end">
+                <span class="hover-color">Privacy & policy |</span>
+                <span class="hover-color">Terms & Use |</span>
+                <span class="hover-color">Refund & Cancellation</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-11 border-bottom border-primary border-5 rounded-1"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

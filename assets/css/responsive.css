@@ -1,0 +1,367 @@
+  @media (max-width: 1200px) {
+            .panel-layout {
+                grid-template-columns: 1fr 280px;
+                gap: 30px;
+            }
+
+            .panel-image img {
+                max-height: 380px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: 220px 1fr;
+            }
+
+            .tab-btn {
+                padding: 14px 16px;
+                font-size: 0.85rem;
+            }
+
+            .tabs-content {
+                padding: 30px;
+            }
+
+            .panel-layout {
+                grid-template-columns: 1fr 240px;
+                gap: 24px;
+            }
+
+            .panel-image img {
+                max-height: 350px;
+            }
+
+            .ourwork,
+            .p-full-features {
+                padding: 70px 0
+            }
+
+            .ourwork ul.nav-tabs {
+                margin-left: 0;
+                margin-top: 0;
+                margin-right: 0;
+                padding: 0;
+                display: flex;
+                border: none;
+                margin-bottom: 20px;
+                justify-content: center;
+                border-bottom: 1px solid #cdcdcd;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .panel-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .panel-image {
+                order: -1;
+                max-width: 300px;
+                margin: 0 auto 20px;
+            }
+
+            .panel-image img {
+                max-height: 250px;
+            }
+
+            .ourwork {
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-section {
+                padding: 40px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 30px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .tabs-nav {
+                display: none;
+            }
+
+            .mobile-tabs-nav {
+                display: flex;
+            }
+
+            .tabs-content {
+                padding: 24px 20px;
+            }
+
+            .panel-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .panel-image {
+                max-width: 100%;
+            }
+
+            .panel-image img {
+                max-height: 220px;
+            }
+
+            .feature-item {
+                padding: 10px 14px;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 28px;
+            }
+
+            .ourwork ul.nav-tabs {
+                overflow-x: auto;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+
+        .ourwork ul.nav-tabs {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+ 
+
+            /* .section-header p {
+                font-size: 0.95rem;
+            } */
+
+            .mobile-tab-btn {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+            }
+
+            .tabs-content {
+                padding: 20px 16px;
+            }
+
+            .panel-header h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-item span {
+                font-size: 0.9rem;
+            }
+
+            .panel-image img {
+                max-height: 180px;
+            }
+        }
+/* cards hover */
+
+/* blueee bannererrr */
+/* ---------- Tablet ---------- */
+@media (max-width:992px){
+
+.cta-section{
+    padding:60px 20px;
+}
+
+.cta-section h1{
+    font-size:28px;
+}
+
+.cta-section h5{
+    font-size:18px;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:576px){
+
+.cta-section{
+    padding:50px 15px;
+}
+
+.cta-section h1{
+    font-size:22px;
+}
+
+.cta-section h5{
+    font-size:16px;
+}
+
+.free-btn{
+    padding:10px 22px;
+    font-size:14px;
+}
+
+}
+
+/* ---------- 320px Phones ---------- */
+@media (max-width:320px){
+
+.cta-section h1{
+    font-size:18px;
+}
+
+.cta-section h5{
+    font-size:14px;
+}
+
+.free-btn{
+    padding:8px 18px;
+    font-size:13px;
+}
+
+}
+/*  */
+ /* Responsive */
+        @media (max-width: 991px) {
+            .left-panel {
+                padding: 3rem 2rem;
+                min-height: auto;
+            }
+
+            .left-panel h1 {
+                font-size: 2.5rem;
+            }
+
+            .right-panel {
+                padding: 2rem;
+            }
+
+            .service-options {
+                flex-direction: column;
+            }
+
+            .service-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-box {
+                flex-direction: column;
+            }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+
+            .social-icons {
+                gap: 1rem;
+            }
+
+            .social-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .phone-group {
+                flex-direction: column;
+            }
+
+            .country-select {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding: 0.75rem;
+            }
+        }
+/* verticals design */
+/* ------------------ RESPONSIVE ------------------ */
+/* seo inner page top responsive banner */
+/* 🔥 320px & Small Devices */
+@media (max-width: 360px) {
+
+  .banner-content {
+    position: static;          /* important */
+    transform: none;
+    padding: 15px;
+    background: #00000099;     /* readability */
+    text-align: left;
+  }
+
+  .banner-content h2 {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .banner-content i {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .banner-content p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+
+/* grid scroll small moving tabs */
+/* @media (max-width: 320px){
+
+  .industry-slider-container{
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .industry-slider-container::-webkit-scrollbar{
+    display: none;
+  }
+
+  .industry-grid{
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+} */
+
+/* Industries verticals: responsive layout */
+
+
+@media (max-width: 991.98px) {
+  .industry-card,
+  .industry-card-2,
+  .industry-card-3 {
+    flex: 1 1 calc(50% - 8px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .industry-grid {
+    gap: 12px;
+  }
+
+  .industry-card,
+  .industry-card-2,
+  .industry-card-3 {
+    flex: 1 1 100%;
+    min-height: 68px;
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .industry-card i,
+  .industry-card-2 i,
+  .industry-card-3 i {
+    font-size: 1.35rem;
+  }
+}
+/* about section------------ */
+

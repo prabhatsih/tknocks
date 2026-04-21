@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+     <style>
+        .buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 200px;
+}
+.background-img {
+  background-image: url('../imgs/background\ img.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.skills-img {
+  height: 70px;
+  width: 70px;
+
+}
+
+.skill-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#pro_ps .pip.full {
+  background: #4388d5 !important;
+}
+
+.pro_ps .pip {
+  border: 2px solid #4388d5 !important;
+}
+
+.pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px; 
+  float: left;
+  margin-right: 10px;
+  margin-top: 30px;
+
+}
+.bg-color{
+  background: linear-gradient(45deg, #1882c3, #2594ea, #3097ef);
+  /* height: 100vh; */
+}
+.border-bottom{
+  border: 3px solid white;
+  width: 10%;
+}
+.contact-img{
+  background-image: url('./assets/images/intro-image.png');
+  background-position: center;
+  background-size: cover;
+}
+.contact-para{
+  font-size: 14px;
+  color: white;
+  padding: 10px 15px;
+} 
+.card{
+width:100%;
+height:100%;
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+/* image */
+ .card img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+} 
+
+/* white slider */
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: #ffffff88;
+padding:20px;
+box-sizing:border-box;
+transform:translateY(-100%);
+transition:0.4s ease;
+} 
+
+/* hover effect */
+.card:hover .overlay{
+transform:translateY(0);
+} 
+
+/* text */
+ .overlay h3{
+margin-top:0;
+color:#333;
+} 
+
+ .overlay p{
+color:#555;
+} 
+/* ---------------------section 2------------------------------------ */
+.card-img{
+  height:50% ;
+  width: 40%;
+  padding:20px 20px;
+} 
+ .timeline {
+            position: relative;
+            margin-left: 50px;
+        }
+
+        /* Vertical line */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #1e90ff;
+        }
+
+        /* Timeline items */
+        .timeline-item {
+            position: relative;
+            height: 100px;
+        }
+
+        /* Outer circle */
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 22px;
+            height: 22px;
+            border: 3px solid #1e90ff;
+            border-radius: 50%;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        /* Inner dot */
+        .timeline-dot::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background: #1e90ff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Hover effect */
+        .timeline-item:hover .timeline-dot {
+            box-shadow: 0 0 12px rgba(30,144,255,0.5);
+            transform: scale(1.1);
+        }
+       .hover-box {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.hover-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/images/card-img1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;                    /* Hidden by default */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.hover-box:hover::before {
+    opacity: 0.9;                 /* Change this value (0.0 to 1.0) */
+    z-index: 1;
+}
+
+/* Make sure content stays above the image */
+.hover-box > * {
+    position: relative;
+    z-index: 2;
+}
+.slider-img{
+    background-image: url('./assets/images/slide_2_bg_2.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.slider-img::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.24);
+    z-index: 1;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 120px;
+  padding: 60px;
+  background-image: radial-gradient(#d3d3d3 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+/* service item */
+.service {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* icon circle */
+.icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px; /* important for flex */
+    border-radius: 50%; /* 🔥 THIS makes it perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    font-size: 28px;
+    color: #2f80ed;
+}
+
+
+/* text */
+.service span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+    </style>
+</head>
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container align-items-center">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/name-logo.png" alt="Tknocks" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="./carousal-slider.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="./portfolio.html">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 fw-semibold ls-sm text-white" href="./contact-us.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 pb-lg-2 fw-semibold  active" aria-current="page" href="./index.html">
+                            <i class="fa fa-home text-warning"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+   <!-- Left Side Navbar Section Start -->
+    <div class="bg-white bg-opacity-50 position-fixed top-0 start-0 rounded-end-4 d-none d-lg-block vh-100" style="z-index: 999;">
+        <div class="d-flex align-items-start flex-column justify-content-between h-100 pb-5 z-index-9999 hover-black">
+            <div>
+                <img src="./assets/images/tknocks.jpeg" alt="tknocks" width="80px">
+                <div class="side-line"></div>
+            </div>
+
+            <div class="bg-primary rounded-5 left-sidebar-menu" style="padding:7px 13px; margin-left: 13px;">
+                <a href="#" class="d-block py-2">
+                    <i class="fas fa-home fs-4 text-white"></i>
+                </a>
+                <a href="#" class="d-block py-2">
+                    <i class="fas fa-user fs-4 text-white"></i>
+                </a>
+                <a href="#" class="d-block py-2">
+                    <i class="fas fa-folder-open fs-4 text-white"></i>
+                </a>
+                <a href="#" class="d-block py-2">
+                    <i class="fas fa-blog fs-4 text-white"></i>
+                </a>
+                <a href="#" class="d-block py-2">
+                    <i class="fas fa-phone fs-4 text-white"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#" style="height: 55px; width: 55px; margin-left: 13px;"
+                    class="d-block py-3 bg-primary rounded-circle align-items-center justify-content-center d-flex">
+                    <i class="fas fa-envelope fs-4 text-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Left Side Navbar Section End -->
+
+    <!-- Left Side Navbar Section on hover Start -->
+    <div class="sidebar-expanded position-fixed top-0 start-0 vh-100 d-none d-lg-flex" id="sidebarExpanded">
+        <div class="sidebar-left-panel d-flex flex-column justify-content-between ps-2 px-2">
+            <div class="text-center g-2">
+                <img src="./assets/images/logoo.png" alt="TKNOCKS" class="mt-2" width="100%">
+            </div>
+            <div class="rounded-4 px-2 py-2 mx-1 my-3 g-4" style="background: #ffffff0f;">
+                <a href="./index.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-home fs-5"></i><span>Home</span>
+                </a>
+                <a href="./about-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-user fs-5"></i><span>About</span>
+                </a>
+                <a href="./portfolio.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-folder-open fs-5"></i><span>Projects</span>
+                </a>
+                <a href="./blog.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-blog fs-5"></i><span>Blogs</span>
+                </a>
+                <a href="./get-a-quote.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone fs-5"></i><span>Get a Quote</span>
+                </a>
+                <a href="./scheluded-meet.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-calendar-check fs-5"></i><span>Schedule a meeting</span>
+                </a>
+                <a href="./contact-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone-alt fs-5"></i><span>Contact</span>
+                </a>
+            </div>
+            <div class="px-2 mb-3">
+                <a href="./contact-us.html"
+                    class="sidebar-connect-btn d-flex align-items-center justify-content-center gap-2 text-decoration-none rounded-pill py-2 px-3 mb-3">
+                    Connect <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <a href="#" class="sidebar-social-icon">
+                        <i class="fab fa-instagram fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-facebook fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-linkedin fs-4"></i>
+                    </a>
+                </div>
+                <div class="text-center sidebar-contact-info">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <i class="fas fa-phone-square-alt text-primary fs-4"></i>
+                        <span class="fs-18">+91-9123107775</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <i class="fas fa-envelope text-primary fs-4"></i>
+                        <span class="fs-18">info@tknocks.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="sidebar-right-panel d-flex flex-column justify-content-center align-items-center py-4 px-1 rounded-end-4">
+            <a href="./design-development.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/website-design-services.png" alt="Design" width="38" class="mb-1">
+                <span class="fw-bold">Design &amp; Development</span>
+            </a>
+            <a href="./digital-marketing.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/digital-marketinglogo.png" alt="Digital Marketing" width="38" class="mb-1">
+                <span class="fw-bold">Digital<br>Marketing</span>
+            </a>
+            <a href="./mobileapp-design.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/app-mobile.png" alt="Mobile App" width="38" class="mb-1">
+                <span class="fw-bold">Mobile<br>App Dev.</span>
+            </a>
+            <a href="./it-consulting.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/it-consulting.png" alt="IT Consulting" width="38" class="mb-1">
+                <span class="fw-bold">IT<br>Consulting</span>
+            </a>
+            <a href="./virtual-staff.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none ls-lg">
+                <img src="./assets/images/support.png" alt="Virtual Staffing" width="38" class="mb-1">
+                <span class="fw-bold">Virtual<br>Staffing</span>
+            </a>
+        </div>
+    </div>
+    <!-- Left Side Navbar Section on hover End -->
+    <div class="sidebar-expanded position-fixed top-0 start-0 vh-100 d-none d-lg-flex" id="sidebarExpanded">
+        <div class="sidebar-left-panel d-flex flex-column justify-content-between ps-2 px-2">
+            <div class="text-center g-2">
+                <img src="./assets/images/logoo.png" alt="TKNOCKS" class="mt-2" width="100%">
+            </div>
+            <div class="rounded-4 px-2 py-2 mx-1 my-3 g-4" style="background: #ffffff0f;">
+                <a href="./index.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-home fs-5"></i><span>Home</span>
+                </a>
+                <a href="./about-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-user fs-5"></i><span>About</span>
+                </a>
+                <a href="./portfolio.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-folder-open fs-5"></i><span>Projects</span>
+                </a>
+                <a href="./blog.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-blog fs-5"></i><span>Blogs</span>
+                </a>
+                <a href="./get-a-quote.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone fs-5"></i><span>Get a Quote</span>
+                </a>
+                <a href="./scheluded-meet.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-calendar-check fs-5"></i><span>Schedule a meeting</span>
+                </a>
+                <a href="./contact-us.html"
+                    class="sidebar-menu-item d-flex align-items-center gap-3 px-2 py-3 rounded-4 text-decoration-none">
+                    <i class="fas fa-phone-alt fs-5"></i><span>Contact</span>
+                </a>
+            </div>
+            <div class="px-2 mb-3">
+                <a href="./contact-us.html"
+                    class="sidebar-connect-btn d-flex align-items-center justify-content-center gap-2 text-decoration-none rounded-pill py-2 px-3 mb-3">
+                    Connect <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <a href="#" class="sidebar-social-icon">
+                        <i class="fab fa-instagram fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-facebook fs-4"></i>
+                    </a>
+                    <a href="#" class="sidebar-social-icon sidebar-social-icon--filled">
+                        <i class="fab fa-linkedin fs-4"></i>
+                    </a>
+                </div>
+                <div class="text-center sidebar-contact-info">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <i class="fas fa-phone-square-alt text-primary fs-4"></i>
+                        <span>+91-9123107775</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <i class="fas fa-envelope text-primary fs-4"></i>
+                        <span>info@tknocks.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-right-panel d-flex flex-column justify-content-center align-items-center py-4 px-1 rounded-end-4">
+            <a href="./design-development.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/website-design-services.png" alt="Design" width="38" class="mb-1">
+                <span class="fw-bold">Design &amp; Development</span>
+            </a>
+            <a href="./digital-marketing.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/digital-marketinglogo.png" alt="Digital Marketing" width="38" class="mb-1">
+                <span class="fw-bold">Digital<br>Marketing</span>
+            </a>
+            <a href="./mobileapp-design.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/app-mobile.png" alt="Mobile App" width="38" class="mb-1">
+                <span class="fw-bold">Mobile<br>App Dev.</span>
+            </a>
+            <a href="./it-consulting.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none mb-4 ls-lg">
+                <img src="./assets/images/it-consulting.png" alt="IT Consulting" width="38" class="mb-1">
+                <span class="fw-bold">IT<br>Consulting</span>
+            </a>
+            <a href="./virtual-staff.html"
+                class="sidebar-service-item d-flex flex-column align-items-center text-decoration-none ls-lg">
+                <img src="./assets/images/support.png" alt="Virtual Staffing" width="38" class="mb-1">
+                <span class="fw-bold">Virtual<br>Staffing</span>
+            </a>
+        </div>
+    </div>
+    <!-- Left Side Navbar Section on hover End -->
+     <!-- Right Side Contact Icon Start -->
+    <div class="contact-bar position-fixed top-50 end-0 translate-middle-y">
+        <a href="tel:9568115511" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/tel-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">+91-9568115511</span>
+        </a>
+        <a href="#" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/skype.png" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">Skype</span>
+        </a>
+        <a href="mailto:info@tknocks.in" class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <img src="./assets/images/email-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">info@tknocks.in</span>
+        </mailto:info@tknocks.in>
+        <a href="https://api.whatsapp.com/send?phone=+919568115511&text=Welcome%20to%20TKNOCKS%20TECHNICAL%20SERVICES%20PVT.LTD.%20We%20provide%20best%20Information%20Technology%20solutions%20for%20Software%20/%20Web%20Development,%20Digital%20Marketing,%20IT%20consulting%20and%20virtual%20Staffing....." class="contact-item text-decoration-none">
+            <div class="icon-box">
+                <!-- <i class="fab fa-whatsapp"></i> -->
+                <img src="./assets/images/whatsapp-icon.jpg" alt="" class="img-fluid">
+            </div>
+            <span class="contact-text">+91-9568115511</span>
+        </a>
+    </div>
+    <!-- Right Side Contact Icon End -->
+
+    <!-- Profile Hero Page Section Start -->
+    <section id="carouselExampleDark" class="carousel carousel-dark slide position-absolute top-0 start-0 end-0"
+        data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="6000">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <img src="./assets/images/profile silder1.jpg" alt="tknock-profile" class="w-100" style="height: 100vh;">
+                    </div>
+                    <div class="col-md-5">
+                        <h1 class="display-1 text-primary opacity-75 fw-bold">Hello,</h1>
+                        <p class="fs-2">We are
+                            <span class="text-primary">"TKNOCKS"</span>
+                            one of the <br> finest information
+                            technology <br>services & digital markting <br> agency
+                        </p>
+                        <span class="fs-4">For Personal & Business Needs</span>
+                    </div>
+                </div>
+            </div>
+             <div class="carousel-item" data-bs-interval="6000">
+                <section>
+                     <div class="container-fluid">
+                        <div class="row">
+                            <div class="slider-img">
+                                <div class="py-5 text-left" style="padding-left: 100px;">
+                                    <h2 class="display-5 pt-4 text-light fw-bold">TKNOCKS DELIVERS</h2>
+                                    <div class="py-2">
+                                        <p class="text-white">We are global
+                                            Information Technology service provider located in India, we established global<br>
+                                            repute in providing Website Designing & Development , Mobile Apps, Software
+                                            Development,<br>
+                                            Information Technology Consulting, Recruitment , Contact Center Consulting, Digital<br>
+                                            Marketing Services, Online Reputation Management, to our reputed clients worldwide
+                                            We<br>
+                                            delivers an exceptional customer service within acquired timelines.</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-white fs-5 py-1">TKNOCKS expertise
+                                            & experience is based on its exceptional<Br>
+                                            understanding about every aspect of business requirements of the<br>
+                                            client’s, business model and market analysis, business analytics and<br>
+                                            target audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                  <section class="py-5" style="background-image: url('./assets/images/profile-bg-img.png');">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-md-4">
+                   <div class="border border-3 rounded-4 bg-light shadow-md px-4 py-5" style="width: 350px;">
+                     <p class="text-muted fw-semibold lh-lg">TKNOCKS is one of the fastest growing
+                        Information Technology Services Company
+                        in India Established in 2016. The Company
+                         has been promoted by highly experienced
+                        Professionals and a dedicated team to
+                        provide 360 Degree IT solutions and
+                        services under its umbrella. We as a
+                        professional team, with latest technology
+                        support and in-depth market knowledge
+                        had already delivered hundred’s of projects
+                        for our clients in given below Services and
+                        solutions.</p>
+                   </div>
+                </div>
+
+                 <div class="col-md-8 services">
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon1.png" alt="" class="w-50"></div>
+                        <span>DESIGN & DEVELOPMENT</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon2.png" alt="" class="w-50"></div>
+                        <span>DIGITAL MARKETING</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon3.png" alt="" class="w-50"></div>
+                        <span>ONLINE REPUTATION MANAGEMENT</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon4.png" alt="" class="w-50"></div>
+                        <span>ON DEMAND REMOTE SUPPORT</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon5.png" alt="" class="w-50"></div>
+                        <span>SOFTWARE SUPPORT CONTRACT</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon6.png" alt="" class="w-50"></div>
+                        <span>IT SUPPORT CONTRACT</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon7.png" alt="" class="w-50"></div>
+                        <span>SOFTWARE WEB INTEGRATION</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon8.png" alt="" class="w-50"></div>
+                        <span>BPO SERVICES</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon9.png" alt="" class="w-50"></div>
+                        <span>IT CONSULTING</span>
+                    </div>
+
+                    <div class="service">
+                        <div class="icon"><img src="./assets/images/icon10.png" alt="" class="w-50"></div>
+                        <span>VIRTUAL STAFFING</span>
+                    </div>
+
+                </div>
+        </div>
+    </section>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <div class="align-items-center" style="background: url(./assets/images/profile-bg-img.png) no-repeat; background-size: cover;">
+                    <div class="container">
+                        <div class="row pt-5">
+                            <div class="ff">
+                                <div class="py-3">
+                                    <h2>Our project contribution for clients</h2>
+                                </div>
+                                <div>
+                                    <h5>
+                                        Delivered successfully, services and solutions for IT requirements of our
+                                        clients.
+                                    </h5>
+                                    <span>
+                                        Below given are the snippets of few numbers and stats, which will show our
+                                        capabilities,
+                                        expertise
+                                        and achievements.
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <section class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                   <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon3.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Grapic Design</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Graphic
+                                                    design is a craft where professionals
+                                                    create visual content to communicate better and deliver messages. By
+                                                    applying visual
+                                                    hierarchy and page layout techniques, designers use typography and
+                                                    pictures to meet
+                                                    users'</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- card 2 -->
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon2.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Website
+                                                        Devlopment</b></h5>
+                                                <p class="card-text py-3 px-3 fs-6">A
+                                                    professionally designed and developed website
+                                                    is the need of a business. It has a goal to create
+                                                    an indelible reputation for the brand. The design
+                                                    of a website makes the first impression, which
+                                                    helps the user to make a decision if it is the right
+                                                    choice.</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon3.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Grapic Design</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Graphic
+                                                    design is a craft where professionals
+                                                    create visual content to communicate better and deliver messages. By
+                                                    applying visual
+                                                    hierarchy and page layout techniques, designers use typography and
+                                                    pictures to meet
+                                                    users'</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon4.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Desktop Application</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Software development is the process
+                                                    of
+                                                    conceiving, specifying, designing, programming,
+                                                    documenting, testing, and bug-fixing involved in
+                                                    creating and maintaining applications,
+                                                    frameworks, or other software components.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- row 2 -->
+                                <div class="row pt-4">
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon5.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Mobile Application</b></h5>
+                                                <p class="card-text py-3  fs-6">Mobile app development is the act or
+                                                    process by
+                                                    which software is developed for mobile devices,
+                                                    such as personal digital assistants, enterprise
+                                                    digital assistants or mobile phones. These
+                                                    software applications are designed to run on
+                                                    mobile devices, such as a smartphone or tablet computers..</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon6.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>CRM Tools</b></h5>
+                                                <p class="card-text py-3 px-3 fs-6">A
+                                                    Customer relationship management (CRM) is a
+                                                    technology for managing all your company's
+                                                    relationships and interactions with customers
+                                                    and potential customers. A CRM system helps
+                                                    companies stay connected to customers,
+                                                    streamline processes, and improve profitability.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon7.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Content Management</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Graphic
+                                                    As the name suggests CRM is to provide the
+                                                    customer with the best service and experience
+                                                    with the clients and provides direct ROI as
+                                                    efficient service delivery to the customer.
+                                                    Content management (CM) is the process of
+                                                    collection, delivery, retrieval, governance and
+                                                    overall management of information in any format.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon8.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Search Engine Optimization</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Search Engine Optimization (SEO), is the process
+                                                    of setting your website up in a way that makes it
+                                                    easy to find on a Search Engine’. You are basically
+                                                    trying to put your ‘best foot forward so a ‘Search
+                                                    Engine’ knows what your website is about, and it
+                                                    knows that your website is a high-quality
+                                                    resource in your industry.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ------------row 3 ------------->
+                                <div class="row pt-4">
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon9.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Social Media Management</b></h5>
+                                                <p class="card-text py-3  fs-6">Social media management is the process
+                                                    of
+                                                    analyzing social media audiences and developing
+                                                    a strategy that is tailored to them, creating and
+                                                    distributing content for social media profiles,
+                                                    monitoring online conversations, collaborating
+                                                    with influencers, providing community service,
+                                                    and monitoring, measuring, and reporting on
+                                                    social media performance and ROI.</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon10.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>360 Degree Branding</b></h5>
+                                                <p class="card-text py-3 px-3 fs-6">A
+                                                    360-degree branding is a branding effort which
+                                                    tries to include the brand identity in a holistic
+                                                    approach so that the brand is in touch with and
+                                                    visible to the customers at all times. It's all about
+                                                    creating a distinctive brand philosophy which is
+                                                    centered on consumers.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon11.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Google Ad words (PPC)</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Google Ads is an online advertising
+                                                    platform
+                                                    developed by Google, where advertisers bid to
+                                                    display brief advertisements, service offerings,
+                                                    product listings, or videos to web users. It can
+                                                    place ads both in the results of search engines
+                                                    like Google Search and on non-search websites,
+                                                    mobile apps, and videos.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon12.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Lead Generation</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Lead Generation is a process of generating
+                                                    business leads based on the business
+                                                    requirements and market strategy of the client.
+                                                    Lead generation will directly convert into revenue
+                                                    for the client in terms of qualified and relevant
+                                                    business leads.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ------------- row 4----------- -->
+                                <div class="row pt-4">
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon13.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>IT- Infrastructure</b></h5>
+                                                <p class="card-text py-3  fs-6">IT infrastructure consultancy services
+                                                    are offered
+                                                    toassist you to make certain that your IT
+                                                    infrastructure is able to adapt or suits new business requirements
+                                                    in real-time efficiently.
+                                                    Our technicians in the first place will assess the
+                                                    situation of your current
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon14.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Information Security</b></h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Our team is business and technology expertise to
+                                                    enable your business to become simple and
+                                                    effective. We rejuvenate your IT process, which
+                                                    will make you focus on your core competencies,
+                                                    thus lowering the cost of managing IT
+                                                    infrastructure, information security and governance,
+
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon15.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Service Delivery</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">Information Technology service
+                                                    delivery is the
+                                                    way in which the corporation provides user’s
+                                                    right to use IT services and solve their problems
+                                                    within defined timelines to prevent or minimize
+                                                    any IT downtime. This includes applications, data
+                                                    storage and other business resources along with
+                                                    IT service management (ITSM).
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon17.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Incident Management</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    IT Incidents are situations where one or more IT
+                                                    services are affected which impacts production
+                                                    for users of the organization. The purpose of the
+                                                    Incident Management process is to restore IT
+                                                    service operations as quickly as possible and
+                                                    minimize the adverse impact on business
+                                                    operations.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ---------------row 5---------------- -->
+                                <div class="row pt-4">
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon18.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b> Contact Center Management</b>
+                                                </h5>
+                                                <p class="card-text py-3  fs-6">
+                                                    Contact Center is thebackbone of any business
+                                                    where customers’ queries are answered over the
+                                                    phone calls/chat/emails. Organizations need
+                                                    better calls management to improve contact
+                                                    center. A call center is an integration of a Call
+                                                    Management system, CRM and Database when
+                                                    these components 
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon19.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>Support On-Demand Services</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Support on-demand is a service where experts
+                                                    are available to work for any information
+                                                    technology-related incident/ problem/ audit/
+                                                    training/ assessment/ consulting. It is a one-time
+                                                    paid servic
+
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon20.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>BPO Services</b> </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Business Process Outsourcing is a process of
+                                                    outsourcing various business functions such as
+                                                    customer service, technical support services
+                                                    (both inbound and outbound, calling or non-
+                                                    calling), payroll management, operations
+                                                    management, etc. to athird-party service provider
+                                                    with a proven track record in the field. 
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card-area border border-2 p-3 rounded-3 h-100 hover-box">
+                                            <img src="./assets/images/card-icon21.png" class="w-25"
+                                                alt="...">
+                                            <div class="card-bodyy ff" style="height: 324px;">
+                                                <h5 class="card-title text-primary"><b>VIRTUAL STAFFING</b>
+                                                </h5>
+                                                <p class="card-text py-3 px-3 fs-6">
+                                                    Virtual staffing can be defined as self-employed
+                                                    experts who work for clients from a remote
+                                                    location. They work according to the
+                                                    specifications provided by the client and thus
+                                                    offer a wide range of affordable services as the
+                                                    employer does not have to bear the
+                                                    infrastructure cost.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="py-1">
+                                                    <i class="fa-solid fa-arrow-right img-fluid"></i>
+                                                </div>
+                                                <a href="#" class="text-decoration-none fw-bolder text-black px-3">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <div class="align-items-center"
+                    style="background: url(./assets/images/profile-bg-img.png) no-repeat; background-size: cover;">
+                    <div class="container">
+                <div class="row">
+                <div class="text-center  py-4">
+                    <h2>Technologies and Expertise</h2>
+                    <P class="fs-5">Highlighting TKNOCKS Technologies platforms and expertise</P>
+                    <span>
+                        TKNOCKS is capable of a wide variety of industry-standard software platforms technologies and
+                        Coding languages, as highlighted below. However, we<br>
+                        have also used a number of other platform-based applications and management tools.
+                    </span>
+                </div>
+                <hr>
+                <!-- ------------------col 1-------------- -->
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <h2>Frontend</h2>
+
+                        <div class="py-3 d-flex">
+                            <img src="./assets/images/HTML5.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <img src="./assets/images/typescript.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="py-3 d-flex">
+                            <img src="./assets/images/JavaScript.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                                <span style="font-size: 12px;">vanilla + jquery + prototype</span>
+                            </div>
+                            <img src="./assets/images/react (2).svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                                <span style="font-size: 12px;">react native + React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------------col 2------------------ -->
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <h2>PHP</h2>
+
+                        <div class="py-3 d-flex">
+                            <img src="./assets/images/php.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <img src="./assets/images/Laravel.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="py-3 d-flex">
+                            <img src="./assets/images/AWS.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                                
+                            </div>
+                            <img src="./assets/images/MySQL.svg" alt="" class="img-fluid skills-img" />
+                            <div id="pro_ps" class="pip_block px-3">
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="pip full" style="display: block;"></div>
+                                <div class="clear"></div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------hr----------------------------- -->
+              <div class="py-3">
+                  <hr>
+              </div>
+              <!-- ---------------------- col 3-------------------------- -->
+                <div class="col-md-6 py-3">
+                    <div class="skill-card">
+                        <h2 class="py-2">Node.js</h2>
+                        <div>
+                            <img src="./assets/images/JavaScript.svg" alt="" class="img-fluid" style="height: 30%; width: 30%;">
+                        </div>
+                        <div class="py-5 px-4">
+                            <img src="./assets/images/angular (1).svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/socketio.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/react (1).svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/mongo.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/aws (1).svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/express.svg" alt="" class="img-fluid skills-img px-2">
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------col 4--------------------------------- -->
+                 <div class="col-md-6 py-3">
+                    <div class="skill-card">
+                        <h2 class="py-2">Mobile</h2>
+                        <div>
+                            <img src="./assets/images/react (2).svg" alt="" class="img-fluid" style="height: 30%; width: 30%;">
+                        </div>
+                        <div class="py-5 px-4">
+                            <img src="./assets/images/react (1).svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/redux.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/ios.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/android.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/node.svg" alt="" class="img-fluid skills-img px-2">
+                            <img src="./assets/images/graph.svg" alt="" class="img-fluid skills-img px-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <!-- --------------------------------- end of the page------------------- -->
+            <div class="text-center py-1">
+                <img src="./assets/images/pro_winmac.png" alt="" class="img-fluid"/>
+            </div>
+                <P class="text-center">Window or Mac</P>
+        </div>
+                </div>
+            </div>
+              <div class="carousel-item" data-bs-interval="6000">
+                <div class="align-items-center"
+                    style="background: url(./assets/images/profile-bg-img.png) no-repeat; background-size: cover;">
+                     <!-- --------------------------------------section 1------------------------------ -->
+    <section class="portfolio-img">
+        <div class="card">
+            <img src="./assets/images/portfolio-img.jpg">
+            <div class="overlay">
+               <div class="py-5 text-center">
+                 <p class="fs-2">Portfolio</p>
+                <p class="fs-5">Take a look of TKNOCKS creative work.</p>
+                <span>These Snapshots are to display case our abilities as a Designing & Web Development company.</span>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------section 2--------------------------------------- -->
+    <section class="py-5" style="background-color: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-primary fs-4">Grezns</p>
+                    <hr>
+                 <P class="fs-6"><b>The Grezns is a chain of luxurious hotels.</b></P>
+                 <p>The Grezns is a chain of luxurious hotels in India and
+                     abroad. We are one of India's fastest growing premium 
+                     hospitality brands.</p>
+                     <div class="py-4">
+                        <a href="https://grezns.com/" type="button" class="btn btn-primary" >view in more details</a>
+                     </div>
+                     <span> Opens in a <b>new window</b></span>
+                     <div class="py-2">
+                        <ul>
+                            <span><b>Example format:</b></span>
+                            <li class="py-1"> HTML/CSS/JS</li>
+                            <li class="py-1"> Desktop website</li>
+                            <li class="py-1">Fluid layout (mobile)</li>
+                            <li class="py-1"> PDF mockup artwork</li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="col-md-9">
+                        <div class="d-flex">
+                            <img src="./assets/images/div-img.jpg" alt="" class="card-img">
+                            <img src="./assets/images/div-img3.jpg" alt="" class="card-img">
+                        </div>
+                        <div>
+                            <img src="./assets/images/div-img2.jpg" alt="" class="card-img">
+                              <span style="padding-left: 100px;">
+                                <a href="https://grezns.com/" type="button" class="btn btn-primary">view in more details</a></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------------------------------section 3------------------------- -->
+    <section class="py-5" style="background-color: #dddddd;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-primary fs-4">Newtreelizer</p>
+                    <hr>
+                 <P class="fs-6"><b>Newtreelizer Technology radiation protection.</b></P>
+                 <p>Newtreelizer Technology Pvt. Ltd. is working in the field
+                     of radiation protection,UV Disinfectant & Air
+                      Purification..</p>
+                     <div class="py-4">
+                        <a href="http://newtreelizer.com/" type="button" class="btn btn-primary">view in more details</a>
+                     </div>
+                     <span> Opens in a <b>new window</b></span>
+                     <div class="py-2">
+                        <ul>
+                            <span><b>Example format:</b></span>
+                            <li class="py-1"> HTML/CSS/JS</li>
+                            <li class="py-1"> Desktop website</li>
+                            <li class="py-1">Fluid layout (mobile)</li>
+                            <li class="py-1"> PDF mockup artwork</li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="col-md-9">
+                        <div class="d-flex">
+                            <img src="./assets/images/div-img4.jpg" alt="" class="card-img">
+                            <img src="./assets/images/div-img5.jpg" alt="" class="card-img">
+                        </div>
+                        <div>
+                            <img src="./assets/images/div-img6.jpg" alt="" class="card-img">
+                              <span style="padding-left: 100px;">
+                                <a href="http://newtreelizer.com/" type="button" class="btn btn-primary">view in more details</a></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------------------------section 4---------------------------------- -->
+    <section class="py-5" style="background-color: #9a3c6a;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-primary fs-4">AISM group</p>
+                    <hr>
+                 <P class="fs-6 text-white"><b>Welcome to the AISM group!</b></P>
+                 <p class="text-white">The AISM group offers the best safety training in India
+                     for health and plays a lead role in environmental
+                      management consultancy programs to make the place
+                       safer and sustainable to line.</p>
+                     <div class="py-4">
+                        <a href="https://www.aismgroup.com/" type="button" class="btn btn-primary" >view in more details</a>
+                     </div>
+                     <span class="text-white"> Opens in a <b>new window</b></span>
+                     <div class="py-2 text-white">
+                        <ul>
+                            <span><b>Example format:</b></span>
+                            <li class="py-1"> HTML/CSS/JS</li>
+                            <li class="py-1"> Desktop website</li>
+                            <li class="py-1">Fluid layout (mobile)</li>
+                            <li class="py-1"> PDF mockup artwork</li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="col-md-9">
+                        <div class="d-flex">
+                            <img src="./assets/images/div-img7.jpg" alt="" class="card-img">
+                            <img src="./assets/images/div-img8.jpg" alt="" class="card-img">
+                        </div>
+                        <div>
+                            <img src="./assets/images/div-img9.jpg" alt="" class="card-img">
+                              <span style="padding-left: 100px;">
+                                <a href="https://www.aismgroup.com/" type="button" class="btn btn-primary">view in more details</a></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------------------------section 5---------------------------- -->
+     <section class="py-5" style="background-color: #585858;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-primary fs-4">Ebuild Bazaar</p>
+                    <hr>
+                 <P class="fs-6 text-white"><b>Welcom to ebuildbazaar India</b></P>
+                 <p class="text-white">The Grezns is a chain of luxurious hotels in 
+                    India and abroad. We are one of India's
+                     fastest growing premium hospitality brands.</p>
+                     <div class="py-4">
+                        <a href="https://ebuildbazaar.in/" type="button" class="btn btn-primary">view in more details</a>
+                     </div>
+                     <span class="text-white"> Opens in a <b>new window</b></span>
+                     <div class="py-2 text-white">
+                        <ul>
+                            <span><b>Example format:</b></span>
+                            <li class="py-1"> HTML/CSS/JS</li>
+                            <li class="py-1"> Desktop website</li>
+                            <li class="py-1">Fluid layout (mobile)</li>
+                            <li class="py-1"> PDF mockup artwork</li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="col-md-9">
+                        <div class="d-flex">
+                            <img src="./assets/images/div-img10.jpg" alt="" class="card-img">
+                            <img src="./assets/images/div-img11.jpg" alt="" class="card-img">
+                        </div>
+                        <div>
+                            <img src="./assets/images/div-img12.jpg" alt="" class="card-img">
+                              <span style="padding-left: 100px;">
+                                <a href="https://ebuildbazaar.in/" type="button" class="btn btn-primary">view in more details</a></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ------------------------------------section 6---------------------------------------- -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                     <p class="text-primary fs-3">TruckGuru</p>
+                     <hr>
+                      <span><b>The foremost trucking companies</b></span>
+                      <p class="py-3">India’s most reliable, dedicated and expert online
+                         Transport logistics services partner!</p>
+                </div>
+                <div class="col-md-9">
+                     <div class="d-flex">
+                            <img src="./assets/images/div-img13.jpg" alt="" class="card-img">
+                            <img src="./assets/images/div-img14.jpg" alt="" class="card-img">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <div class="align-items-center" style="background: url(./assets/images/profile-bg-img.png) no-repeat; background-size: cover;">
+                     <section class="bg-color">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 px-2">
+                                    <div class="text-white pt-5">
+                                    <h2>OUR</h2>
+                                    <h3 class=""><b>GLOBLE FOOTPRINTS</b></h3>
+                                    <div class="border-bottom"></div>
+                                <div>
+                            <img src="./assets/images/map.png" alt="map" class="img-fluid">
+                            <P class="fs-3">Over 500 Network</P>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <div class="align-items-center">
+                    <div class="contact-img">
+            <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-md-6">
+                 <img src="./assets/images/slife_7_bg.jpg" alt="" style="width: 80%;">
+              </div>
+              <div class="col-md-6" style="padding-top: 100px;">
+                <div class="text-white text-right">
+                         <h2>Meet the Founders</h2>
+                        <p>Thank you for taking the time to find out about<br>
+                            TKNOCKS, we look forward to hearing from you.</p>
+                        <p>If you would like to know my work history and a<br>
+                            little more about founders of TKNOCKS, see below.</p>
+                    </div>
+              </div>
+            <!--  -->
+            <div class="row justify-content-between pt-5">
+                <div class="col-md-3 py-3">
+                    
+                    <div>
+                        <h3 class="text-white">Work history</h3>
+                        <div class=" border contact-para">
+                            <p>
+                                A Certified Information Technology Solution
+                                 architect with over 18 yearsof experience in
+                                  providing Information Technology Solutions,
+                                   Support & Consulting to multiple
+                                    multinational companies and clients globally 
+                                    on-site and off-site, also rich and extensive
+                                    xperience in leading Technical Proficiency in 
+                                    Cisco UCCE, IPCC and Cisco Call Manager 8.0 
+                                    VOIP Support.
+                            </p>
+                            <hr class="text-white">
+                            <p>
+                                He comes with an insightful experience in
+                                 Project Management activities including,
+                                  People Management, Incident Management,
+                                   Problem Management, Vendor Management
+                                    and Client Relationship Management,
+                                     Business development & solution 
+                                     architecture.
+                            </p>
+                            <hr>
+                            <p>
+                                Mr. Singh is well adept at ascertaining IT
+                                 infrastructure requirements in terms of
+                                  hardware and software applications and
+                                   implementing service delivery and service
+                                    support framework. Currently, he is leading
+                                     the team of key professionals of the
+                                      organization, with his rich and diversified
+                                       experience and expertise in Project
+                                        management and learning.He is the driving
+                                         force behind the successful and timely
+                                         deliveries of projects by TKNOCKS
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="text-white">
+                       <p class="fs-4"><b>A bit about Mr. Singh.</b></p>
+                       <div>
+                        <div class="text-white ">
+                            <span>
+                            Mr. Singh is a man of 40 years with professional experience of 20 years in the IT Infra and Project<br>
+                             Industry.
+                        </span>
+                        <p>As the founder of TKNOCKS, Mr. Singh’s vision is to create a unique and sustainable service and
+                             delivery company, to create projects that can quickly provide a sustainable turnover, a good business
+                              model, business understanding and requirement gathering in the most efficient way to cater to our 
+                              clients. He aims to maximize the productivity of our clients and help them achieve their business
+                               goals.</p>
+                               <p>In his multi-industry experience of requirement gathering design and project delivery, he had 
+                                successfully delivered more than 500 projects. Under his guidance, we at TKNOCKS are growing as
+                                 one the best service and delivery companiesin India with a wide range of services and capabilities to 
+                                 deliver.</p>
+                                 <h4>Thank you for your time,</h4>
+                                    <img src="./assets/images/signature.png" alt="" class="img-fluid">
+                                 <p class="fs-4 py-3">Bhanu P Singh</p>
+                                 <div class="text-white">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="#" class="text-decoration-none text-white">bhanu@tknocks.com</a>
+                                 </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+                </div>
+            </div>
+           
+        </div>
+        <!-- ended ------------------------>
+         <button class="btn btn-light opacity-50 position-absolute" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="top: 40px; left: 93%;">
+            <i class="fa-solid fa-bars text-primary fa-2x"></i>
+         </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width: 50%;">
+                <div class="offcanvas-header bg-dark">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                 <button type="button" class="btn-close bg-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+                <div class="offcanvas-body bg-dark p-5">
+                    <img src="./assets/images/name-logo.png" alt="tknocks" class="w-50">
+                   <span style="padding-left: 25%;">
+                     <a href="index.html" class=" text-decoration-none rounded-3 border border-2 bg-light p-3">Go To Home</a>
+                   </span>
+                   
+                    <div class="row border border-2 bg-light p-3">
+                        <div class="col-md-2">
+                        <div class="timeline">
+                         <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                         </div>
+                     
+                         <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                         </div>
+                     
+                         <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                         </div>
+                     
+                         <div class="timeline-item">
+                             <div class="timeline-dot"></div>
+                         </div>
+
+                     </div>
+                             
+                        </div>
+                        <div class="col-md-10">
+                              <div class="pt-3">
+                        <h5 class="fw-semibold">Address</h5>
+                        <p class="text-muted mb-0">
+                            F-7, 1st Floor, Milap Nagar, Uttam Nagar,<br>
+                            New Delhi-110059
+                        </p>
+                    </div>
+                    <div style="padding-top: 22px;">
+                        <h5 class="fw-semibold">Contact Information</h5>
+                        <a href="mailto:info@tknocks.in" class="text-decoration-none">info@tknocks.in</a>
+                    </div>
+                    <div style="padding-top: 45px;">
+                        <h5 class="fw-semibold">Phone</h5>
+                        <a href="tel:9568115511" class="text-decoration-none">+91 9568115511</a>
+                    </div>
+                    <div class="" style="padding-top: 44px;">
+                        <h5 class="fw-semibold mb-3">Social</h5>
+                        <div class="d-flex gap-3">
+                            <a class="btn btn-outline-secondary btn-sm">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm">
+                                <i class="fab fa-skype"></i>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="pt-3">
+                         <button class="bg-primary border-0 text-white rounded-3">Lets Connect us</button>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- buttons -------------------------->
+        <button class="carousel-control-next text-light bg-light position-absolute" type="button"
+            data-bs-target="#carouselExampleDark" data-bs-slide="next"
+            style="height: 50px; width: 50px; top: 40%; left: 93%; border-radius: 25%;">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+             <img src="./assets/images/next.png" alt="" class="img-fluid">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-prev bg-light position-absolute" type="button"
+            data-bs-target="#carouselExampleDark" data-bs-slide="prev"
+            style="height: 50px; width: 50px; top: 650px; left: 93%; border-radius: 25%">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+             <img src="./assets/images/back.png" alt="" class="h-100">
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+    <!-- Profile Hero Page Section End -->
+
+   
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
