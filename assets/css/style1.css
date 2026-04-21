@@ -16,7 +16,7 @@ body {
 
 /* <!------- Portfolio CSS----------------> */
 .pageimg {
-  background-image: url("../imgs/background\ img.png");
+  background-image: url("./imgs/background\ img.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -140,7 +140,7 @@ h1 {
 /* <!------------- Profile CSS -------> */
 /* <!--------------section-1 css-------- */
 .profileimg {
-  background-image: url(../imgs/profile\ img.png);
+  background-image: url(./imgs/profile\ img.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -257,7 +257,7 @@ h1 {
 .logo-img {
   width: 50%;
   height: 100%;
-  background: url("../imgs/profile\ silder1.jpg");
+  background: url("./imgs/profile\ silder1.jpg");
   background-size: cover;
   position: fixed;
   text-align: center;
@@ -301,7 +301,7 @@ h1 {
 
 /* <!----------------Page-2 --------------- */
 .slider-img {
-  background-image: url('../imgs/profile\ silder2.jpg');
+  background-image: url('./imgs/profile\ silder2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -317,7 +317,7 @@ h1 {
 }
 
 .slider-bg-img {
-  background-image: url('../imgs/dotted\ background.png');
+  background-image: url('./imgs/dotted\ background.png');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -380,7 +380,7 @@ h1 {
 
 /* <!------------------- Page-3-------------------- */
 .section-img {
-  background-image: url('../imgs/background\ img.png');
+  background-image: url('./imgs/background\ img.png');
   background-position: center;
   background-size: cover;
 }
@@ -406,7 +406,7 @@ h1 {
 }
 
 .card-area:hover {
-  background-image: url('../imgs/card-hover-img - Copy.jpg');
+  background-image: url('./imgs/card-hover-img - Copy.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -419,7 +419,7 @@ h1 {
 
 /* --------------------page 4------------------------------- */
 .background-img {
-  background-image: url('../imgs/background\ img.png');
+  background-image: url('./imgs/background\ img.png');
   background-size: cover;
   background-position: center;
 }
@@ -464,7 +464,7 @@ h1 {
 }
 /* -------------------------------page 6---------------------------- */
 .contact-img{
-  background-image: url('../imgs/intro-image.png');
+  background-image: url('./imgs/intro-image.png');
   background-position: center;
   background-size: cover;
 }
