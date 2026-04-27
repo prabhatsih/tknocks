@@ -94,6 +94,28 @@
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); */
 }
 
+/* Mobile navbar: dark background so links are visible on any page background */
+@media (max-width: 991.98px) {
+    .navbar {
+        background-color: rgba(20, 20, 20, 0.92) !important;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(20, 20, 20, 0.97);
+        padding: 10px 16px 16px;
+        border-radius: 0 0 10px 10px;
+        margin-top: 4px;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
+}
+
 .side-line {
     width: 1px;
     height: 100px;
@@ -537,31 +559,39 @@
         opacity: 0;
     }
 }
+
 .icon-circle {
-     width: 80px;
-     height: 80px;
-     background: #f0f4ff;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin: 0 auto 20px;
-     font-size: 2.2rem;
-     color: #0d6efd;
+    width: 80px;
+    height: 80px;
+    background: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.2rem;
+    color: #0d6efd;
 }
-.service-card{
-     border: none;
-     border-radius: 10px;
-     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-     transition: all 0.4s ease;
-     height: 100%;
-     background: #fff;
-}    
+
+.service-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    background: #fff;
+}
+
 .service-card:hover {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     background: #007bff;
-}    
-.service-card:hover .service-title, .service-card:hover p {  color: white !important;}
+}
+
+.service-card:hover .service-title,
+.service-card:hover p {
+    color: white !important;
+}
+
 .core-values {
     background-image: url('../images/about-core-value.png');
     background-size: cover;
@@ -622,9 +652,9 @@
         grid-template-rows: 1fr 1px 1fr 1px 1fr;
         max-width: 720px;
     }
-    
+
     /* Hide the middle vertical divider on tablet */
-    .values-grid > .divider-v:nth-child(4) {
+    .values-grid>.divider-v:nth-child(4) {
         display: none;
     }
 }
@@ -691,6 +721,7 @@
         line-height: 1.5;
     }
 }
+
 .mission-card {
     height: 200px;
     background-size: cover;
@@ -703,7 +734,7 @@
     justify-content: center;
     color: white;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .mission-card::before {
@@ -712,7 +743,7 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.321);
     z-index: 1;
-   
+
 }
 
 .blue-corner {
@@ -731,7 +762,7 @@
     z-index: 3;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
@@ -739,6 +770,7 @@
     .mission-card {
         height: 280px;
     }
+
     .mission-card h3 {
         font-size: 1.65rem;
     }
@@ -748,120 +780,126 @@
     .mission-card {
         height: 250px;
     }
+
     .mission-card h3 {
         font-size: 1.5rem;
     }
 }
-.about-banner{
+
+.about-banner {
     background-image: url('../images/about-banner.jpeg');
     background-position: center;
     background-size: cover;
     height: 100vh;
     position: relative;
 }
-.about-banner::before{
+
+.about-banner::before {
     content: '';
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.704);
     z-index: 1;
 }
+
 /* HERO */
 .hero {
-  background: url('../images/about-banner.jpeg') center/cover no-repeat;
-  min-height: 80vh; 
-  padding: 60px 15px;
-  position: relative;
-  color: #fff;
+    background: url('../images/about-banner.jpeg') center/cover no-repeat;
+    min-height: 80vh;
+    padding: 60px 15px;
+    position: relative;
+    color: #fff;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(2, 7, 21, 0.85);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 7, 21, 0.85);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 /* STATS (VERTICAL FOR 320px) */
 .stats-item {
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
 }
 
 .stats-item:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 /* TABLET (≥576px) */
 @media (min-width: 576px) {
 
-  .main-heading {
-    font-size: 2.2rem;
-  }
+    .main-heading {
+        font-size: 2.2rem;
+    }
 
-  .highlight-text {
-    font-size: 1.6rem;
-  }
+    .highlight-text {
+        font-size: 1.6rem;
+    }
 
-  .cta-btn {
-    width: auto;
-    padding: 10px 25px;
-  }
+    .cta-btn {
+        width: auto;
+        padding: 10px 25px;
+    }
 }
 
 /* DESKTOP (≥992px) */
 @media (min-width: 992px) {
 
-  .hero {
-    min-height: 80vh;
-  }
+    .hero {
+        min-height: 80vh;
+    }
 
-  .main-heading {
-    font-size: 3rem;
-  }
+    .main-heading {
+        font-size: 3rem;
+    }
 
-  .highlight-text {
-    font-size: 2.5rem;
-  }
+    .highlight-text {
+        font-size: 2.5rem;
+    }
 
-  /* HORIZONTAL STATS */
-  .stats-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+    /* HORIZONTAL STATS */
+    .stats-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
-  .stats-item {
-    border-bottom: none;
-    border-right: 1px solid rgba(255,255,255,0.3);
-    padding: 0 20px;
-    width: auto;
-  }
+    .stats-item {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 0 20px;
+        width: auto;
+    }
 
-  .stats-item:last-child {
-    border-right: none;
-  }
+    .stats-item:last-child {
+        border-right: none;
+    }
 }
-.aboutus-banner{
+
+.aboutus-banner {
     background-image: url('../images/abtban.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
-.aboutus-banner::before{
-     content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(2, 7, 21, 0.695);
+
+.aboutus-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 7, 21, 0.695);
 }
 
 /* About us section End */
@@ -1174,12 +1212,15 @@
     /* thumb color | track color */
     scrollbar-width: thin;
 }
+
 .form-select {
     height: 60px;
 }
+
 .input-group-text i {
     font-size: 16px;
 }
+
 /* ============================== Contact Us Page Css End ============================= */
 /* ==================digital services section================ */
 .bottom-line {
@@ -1245,10 +1286,11 @@
     box-shadow: var(--shadow-medium);
     overflow: hidden;
     min-height: 580px;
+
     @media (max-width:320px) {
         margin-left: 0;
     }
-    
+
 }
 
 
@@ -1510,12 +1552,29 @@
 }
 
 /* 2. Specific Card Images */
-.card-1 .hover-image { background-image: url('../images/card-img1.jpg'); }
-.card-2 .hover-image { background-image: url('../images/img-card2.jpg'); }
-.card-3 .hover-image { background-image: url('../images/img-card3.jpg'); }
-.card-4 .hover-image { background-image: url('../images/img-card4.jpg'); }
-.card-5 .hover-image { background-image: url('../images/img-card5.jpg'); }
-.card-6 .hover-image { background-image: url('../images/img-card6.jpg'); }
+.card-1 .hover-image {
+    background-image: url('../images/card-img1.jpg');
+}
+
+.card-2 .hover-image {
+    background-image: url('../images/img-card2.jpg');
+}
+
+.card-3 .hover-image {
+    background-image: url('../images/img-card3.jpg');
+}
+
+.card-4 .hover-image {
+    background-image: url('../images/img-card4.jpg');
+}
+
+.card-5 .hover-image {
+    background-image: url('../images/img-card5.jpg');
+}
+
+.card-6 .hover-image {
+    background-image: url('../images/img-card6.jpg');
+}
 
 
 .hover-image {
@@ -1524,26 +1583,31 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Added a smooth scale move */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Added a smooth scale move */
     pointer-events: none;
     z-index: 2;
 }
 
 .cards:hover .hover-image {
     opacity: 1;
-    transform: scale(1.1); /* Optional: adds a slight zoom effect */
+    transform: scale(1.1);
+    /* Optional: adds a slight zoom effect */
 }
 
 .cards:hover .text-center {
     position: relative;
     z-index: 3;
-    color: white; /* Optional: change text color so it pops against the image */
+    color: white;
+    /* Optional: change text color so it pops against the image */
 }
+
 /* Ensure the content has a transition so it disappears smoothly */
 .card-content {
     transition: opacity 0.5s ease, visibility 0.5s ease;
     position: relative;
-    z-index: 3; /* Keep it above the hover-image until it fades */
+    z-index: 3;
+    /* Keep it above the hover-image until it fades */
 }
 
 /* When the card is hovered, hide the content */
@@ -1918,6 +1982,7 @@ input:checked+.accordion-header+.accordion-content {
     display: flex;
     flex-direction: column;
     min-width: 370px;
+
     @media (max-width:320px) {
         min-width: 280px;
         padding: 50px 30px 30px 20px;
@@ -1966,6 +2031,7 @@ img.pt1 {
 .ourwork .tab-pane {
     padding-top: 20px;
     padding-left: 30px;
+
     @media (max-width:320px) {
         padding-left: 0;
     }
@@ -2415,7 +2481,7 @@ ul.nav-tabs li img {
     font-size: 1rem;
     border: 1px solid #dcdcdc;
     color: #d8d7d2;
-  
+
 }
 
 .form-control:focus,
@@ -2935,7 +3001,7 @@ ul.nav-tabs li img {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    
+
 }
 
 .text-color {
@@ -3013,7 +3079,8 @@ ul.nav-tabs li img {
 /* contact started  */
 .timeline {
     position: relative;
-    margin-left: 50px; /* Default desktop margin */
+    margin-left: 50px;
+    /* Default desktop margin */
 }
 
 /* Vertical line */
@@ -3061,20 +3128,134 @@ ul.nav-tabs li img {
 /* For iPhone SE / 375px screens */
 @media (max-width: 375px) {
     .timeline {
-        margin-left: 20px; /* Reduce margin so content has more room */
+        margin-left: 20px;
+        /* Reduce margin so content has more room */
     }
+
     .col-md-2 {
-        padding: 0; 
+        padding: 0;
     }
-    
+
     .timeline-item {
-        height: 80px; /* Optional: shorten the distance between dots on mobile */
+        height: 80px;
+        /* Optional: shorten the distance between dots on mobile */
     }
 }
 
 /* For small screens / 320px screens */
 @media (max-width: 320px) {
     .timeline {
-        display: none; /* Keep your existing choice to hide it here */
+        display: none;
+        /* Keep your existing choice to hide it here */
+    }
+}
+
+
+/* ===== MOBILE RESPONSIVE FIXES ===== */
+
+/* Hide right-side contact bar on mobile to prevent overlap */
+@media (max-width: 991.98px) {
+    .contact-bar {
+        display: none !important;
+    }
+}
+
+/* Fix hero section height on mobile */
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: auto !important;
+        min-height: 60vh;
+    }
+}
+
+/* Fix top banner sections on service pages (seo, smm, ppc, lead-generation) */
+@media (max-width: 767.98px) {
+    section[style*="background-image"] {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    section[style*="background-image"] h1 {
+        font-size: 1.6rem;
+    }
+
+    section[style*="background-image"] p {
+        font-size: 0.95rem;
+    }
+
+    section[style*="background-image"] br {
+        display: none;
+    }
+}
+
+/* Fix whatwedo-banner on mobile */
+@media (max-width: 767.98px) {
+    .whatwedo-banner {
+        padding: 40px 16px;
+    }
+
+    .bg-text {
+        font-size: 60px;
+    }
+}
+
+/* Fix services-container margin on mobile */
+@media (max-width: 767.98px) {
+    .services-container {
+        margin-left: 0 !important;
+    }
+}
+
+/* Fix px-180 on mobile (causes horizontal overflow) */
+@media (max-width: 991.98px) {
+    .px-180 {
+        padding: 0 16px;
+    }
+}
+
+/* Fix industry-slider-container overflow on mobile */
+@media (max-width: 767.98px) {
+    .industry-slider-container {
+        width: 100%;
+        padding: 0 8px;
+        overflow: hidden;
+    }
+}
+
+/* Fix ourwork section on mobile */
+@media (max-width: 767.98px) {
+    .ourwork .wrkcontent {
+        flex-direction: column;
+    }
+
+    .ourwork .wrkcontent .ltcnt {
+        min-width: unset;
+        padding: 24px 20px;
+    }
+
+    img.pt1 {
+        max-width: 100%;
+    }
+}
+
+/* Fix right-panel form on mobile */
+@media (max-width: 767.98px) {
+    .right-panel {
+        margin-top: 0 !important;
+        height: auto !important;
+        padding: 1.5rem;
+    }
+
+    .left-panel {
+        padding: 2rem 1.5rem;
+    }
+
+    .left-panel h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .stats-box {
+        flex-wrap: wrap;
     }
 }
