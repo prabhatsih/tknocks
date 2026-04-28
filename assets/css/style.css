@@ -30,6 +30,10 @@
     font-family: "Raleway", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .fs-12 {
     font-size: 12px;
 }
@@ -1981,10 +1985,10 @@ input:checked+.accordion-header+.accordion-content {
     padding: 50px 30px 30px 50px;
     display: flex;
     flex-direction: column;
-    min-width: 370px;
+    min-width: 0;
 
     @media (max-width:320px) {
-        min-width: 280px;
+        min-width: 0;
         padding: 50px 30px 30px 20px;
     }
 }
@@ -2757,8 +2761,8 @@ ul.nav-tabs li img {
 }
 
 .industry-slider-container {
-    width: 105%;
-    /* overflow: hidden;  */
+    width: 100%;
+    overflow: hidden;
     position: relative;
     padding: 0 50px;
 }
@@ -3219,6 +3223,12 @@ ul.nav-tabs li img {
         width: 100%;
         padding: 0 8px;
         overflow: hidden;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .industry-slider-container {
+        padding: 0 16px;
     }
 }
 
